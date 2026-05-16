@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+}
+
+:root {
+  --color-primary: #238dbb;
+  --color-secondary: #2d62a3;
+  --color-accent: #0f4c75;
+  --transition-smooth: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  @apply bg-[#f3f4f6] text-[#374151] font-sans overflow-x-hidden antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold leading-tight text-[#111827];
+}
+
+h2 {
+  @apply text-4xl lg:text-5xl mb-8 text-[#0f4c75];
+}
+
+a {
+  @apply no-underline text-inherit;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(31,38,135,0.05)] rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply inline-block px-8 py-4 bg-gradient-to-r from-[#238dbb] to-[#2d62a3] text-white font-semibold text-lg rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 border border-white/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/40;
+  }
+  
+  .section {
+    @apply py-24 relative z-10;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-6 md:px-12;
+  }
+}
+
+/* Animations */
+.reveal-text {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.reveal-text > span {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: revealUp 0.8s var(--transition-smooth) forwards;
+}
+
+@keyframes revealUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#238dbb];
+}
