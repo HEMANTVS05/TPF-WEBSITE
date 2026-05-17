@@ -15,6 +15,60 @@ import communityOutreach from '../assets/community_outreach.jpeg';
 import seminarweb from '../assets/seminarweb.jpeg';
 import conference from '../assets/conference.jpeg';
 import internship from '../assets/internship.jpeg';
+import volunteers from '../assets/volunteers.jpeg';
+import { Link } from 'react-router-dom';
+import poster2 from '../assets/workshop_poster_2.jpg';
+import poster3 from '../assets/workshop_poster_3.png';
+import webinarPoster1 from '../assets/webinar_poster_1.jpg';
+import webinarPoster2 from '../assets/webinar_poster_2.jpg';
+
+// Webinar cards data for the /events/seminars-webinars route
+const webinarCardsData = [
+  {
+    id: '1',
+    title: 'Impact of Fishermen Conflict',
+    date: 'Sep 20, 2025',
+    time: '2:00 PM',
+    venue: 'Online Meet',
+    poster: webinarPoster1
+  },
+  {
+    id: '2',
+    title: 'Coastal Security Threats',
+    date: 'Oct 26, 2025',
+    time: '10:30 AM',
+    venue: 'Online Meet',
+    poster: webinarPoster2
+  }
+];
+
+// Workshop cards data for the /events/workshops route
+const workshopCardsData = [
+  {
+    id: '1',
+    title: 'Newswriting and Designing',
+    date: 'Aug 11, 2025',
+    time: '10:00 AM',
+    venue: 'University of Madras, Chennai',
+    poster: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: '2',
+    title: 'Maritime Security Domain',
+    date: 'Mar 13, 2026',
+    time: '2:00 PM',
+    venue: 'Voorhees College, Vellore',
+    poster: poster2
+  },
+  {
+    id: '3',
+    title: 'Basic Research and Design',
+    date: 'Feb 16, 2026',
+    time: '10:00 AM',
+    venue: 'Maruthupandiyar College',
+    poster: poster3
+  }
+];
 
 // Custom content dictionary for the specific research subtopics
 const customContentData = {
@@ -69,7 +123,8 @@ Anchored in science, inspired by policy, and driven by people, our conferences d
 
 Our webinars, meanwhile, extend this mission into the digital realm, breaking geographical barriers and creating an inclusive, virtual platform for nationwide participation. Covering subjects from climate change and ocean governance to marine pollution and blue economy strategies, these sessions make knowledge accessible to a global audience. Through interactive Q&A sessions, live polls, and panel discussions, participants engage directly with experts and community voices, ensuring that every dialogue is both educational and participatory. Together, our seminars and webinars create a continuous cycle of learning, reflection, and action, nurturing the next generation of maritime scholars and leaders. Each session concludes with key takeaways that contribute to our broader mission of integrating research, policy, and practice for the sustainable development of India’s coastal regions.
 Through our seminar and webinar platforms, C.A.R.c.E. transforms ideas into impact, inspiring awareness, building capacity, and steering India’s maritime future toward sustainability and security.`,
-    image: seminarweb
+    image: seminarweb,
+    hasWebinarCards: true
   },
   '/events/workshops': {
     title: "Workshops",
@@ -77,7 +132,8 @@ Through our seminar and webinar platforms, C.A.R.c.E. transforms ideas into impa
 The sessions are facilitated by experienced mentors, maritime experts, and academicians who provide practical insights and real-world case studies. This approach ensures that participants not only acquire theoretical understanding but also learn to apply their knowledge to current issues such as coastal security, marine governance, heritage preservation, and environmental sustainability. Our workshops also emphasise the art of effective communication and critical writing, helping students build confidence in presenting their research findings and writing persuasive, evidence-based articles for academic and media platforms. Editing modules further enhance participants’ ability to refine their work to meet professional standards.
 Beyond technical skills, these workshops nurture collaboration and interdisciplinary thinking. Participants engage in group discussions, brainstorming sessions, and project-based learning, encouraging teamwork and leadership. By the end of each program, students gain a comprehensive skill set and a clearer vision of how they can contribute to India’s maritime sector through informed research, creative writing, and policy-oriented analysis.
 C.A.R.c.E. Workshops are more than learning sessions they are incubators for youth-driven ideas, shaping capable thinkers and doers who will navigate India’s maritime future.`,
-    image: workshop
+    image: workshop,
+    hasWorkshopCards: true
   },
   '/events/outreach': {
     title: "Community Outreach",
@@ -135,7 +191,8 @@ Our research reports chart the course toward informed policy, resilient communit
     content: `The documentary section brings maritime realities to life through powerful visual storytelling. Each C.A.R.c.E. documentary explores critical themes such as coastal community resilience, marine biodiversity, maritime security, and cultural heritage showcasing both challenges and triumphs from India’s coastline. These documentaries are grounded in rigorous research and fieldwork, blending academic insight with emotional resonance. They serve as visual narratives that amplify the voices of coastal citizens, fishermen, women entrepreneurs, scientists, and policymakers working to protect and develop India’s maritime frontiers.
 Our films not only inform but also inspire. Whether highlighting the impact of climate change on coastal villages, exposing issues like illegal fishing or marine pollution, or celebrating traditional sea-based livelihoods, each documentary reflects our “think-and-do” philosophy combining knowledge with action. Created in collaboration with young filmmakers, researchers, and local communities, our documentaries also serve as educational resources for universities, NGOs, and training institutions. Through cinematic storytelling, we aim to make maritime research accessible, relatable, and transformative.
 Every frame tells a story of the sea of resilience, innovation, and hope along India’s 11,098.81 km coastline.`,
-    image: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147486350/images/7cda74c-fd18-e66e-5f1f-3af0e852dc26_Sebastian_Solberg_v18.jpg"
+    image: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147486350/images/7cda74c-fd18-e66e-5f1f-3af0e852dc26_Sebastian_Solberg_v18.jpg",
+    hasYouTubeVideo: "QeBIuY5uzCs"
   },
   '/blogs/newsletter': {
     title: "Newsletter",
@@ -168,7 +225,7 @@ At C.A.R.c.E., data is more than numbers, it’s a story of the sea waiting to b
 C.A.R.c.E. welcomes individuals from diverse backgrounds students, professionals, educators, and community leaders who are passionate about making a tangible difference. Volunteers gain hands-on experience in project coordination, community interaction, event organization, and social impact initiatives. Through participation, they also build a deeper understanding of how policy, research, and public action intertwine to shape sustainable coastal futures. We believe volunteering is not only service but also self-development. By joining our programs, volunteers enhance their leadership, teamwork, and problem-solving skills while being part of a supportive, youth-driven network of changemakers. Whether you can dedicate a few hours or a few months, your time and talent help us drive transformation along India’s 11,098.81 km coastline.
  
 Be a volunteer with C.A.R.c.E., because every small act can make a tidal impact.`,
-    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop",
+    image: volunteers,
     actionButton: {
       text: "Join our WhatsApp Group",
       url: "https://chat.whatsapp.com/BT05h94hidPLNL7B1RxpD5?mlu=2&s=cl&p=a",
@@ -183,7 +240,7 @@ Be a volunteer with C.A.R.c.E., because every small act can make a tidal impact.
 At the end of the program, each intern produces a publication or research brief that contributes to C.A.R.c.E knowledge repository. Certificates and recommendation letters are provided to those who demonstrate exceptional commitment and innovation.
  
 Embark on your journey with C.A.R.c.E. where learning sails beyond classrooms, and every idea makes a wave of change.`,
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
+    image: internship,
     actionButton: {
       text: "Apply Now for Internship",
       url: "https://docs.google.com/forms/d/e/1FAIpQLSf0H4etrRCVBb8C0Oe6dG_AEIf73qp3ZdXZ2elton4EnpTdnA/viewform?usp=sharing&ouid=109014665665869315060",
@@ -247,6 +304,121 @@ export default function GenericPage() {
                 <span className="text-2xl">{customData.actionButton.icon}</span>
                 {customData.actionButton.text}
               </a>
+            </div>
+          )}
+
+          {/* YouTube Video Section */}
+          {customData.hasYouTubeVideo && (
+            <div className="mt-16 border-t border-gray-200 pt-16">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Featured Documentary</h3>
+              <div className="aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-black">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src={`https://www.youtube.com/embed/${customData.hasYouTubeVideo}?autoplay=0&rel=0`} 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          )}
+
+          {/* Workshop Cards Section */}
+          {customData.hasWorkshopCards && (
+            <div className="mt-16 border-t border-gray-200 pt-16">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Upcoming & Past Workshops</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {workshopCardsData.map((workshop) => (
+                  <Link
+                    to={`/events/workshops/${workshop.id}`}
+                    key={workshop.id}
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block"
+                  >
+                    <div className="aspect-[3/4] relative overflow-hidden">
+                      <img
+                        src={workshop.poster}
+                        alt={workshop.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+
+                      {/* Hover Info */}
+                      <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <span className="inline-block px-3 py-1 bg-[#238dbb]/20 backdrop-blur-md border border-[#238dbb]/30 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-3 w-fit">
+                          Workshop
+                        </span>
+                        <h4 className="text-xl font-bold !text-white mb-4 drop-shadow-md leading-tight z-10 relative">
+                          {workshop.title}
+                        </h4>
+
+                        <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-sm font-medium text-gray-200">
+                          <p className="flex items-center gap-2">
+                            <span>📅</span> {workshop.date}
+                          </p>
+                          <p className="flex items-center gap-2">
+                            <span>⏰</span> {workshop.time}
+                          </p>
+                          <p className="flex items-start gap-2">
+                            <span className="mt-1">📍</span>
+                            <span className="leading-snug">{workshop.venue}</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Webinar Cards Section */}
+          {customData.hasWebinarCards && (
+            <div className="mt-16 border-t border-gray-200 pt-16">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Our Webinars</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                {webinarCardsData.map((webinar) => (
+                  <Link
+                    to={`/events/webinars/${webinar.id}`}
+                    key={webinar.id}
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block"
+                  >
+                    <div className="aspect-[3/4] relative overflow-hidden">
+                      <img
+                        src={webinar.poster}
+                        alt={webinar.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+
+                      {/* Hover Info */}
+                      <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <span className="inline-block px-3 py-1 bg-[#238dbb]/20 backdrop-blur-md border border-[#238dbb]/30 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-3 w-fit">
+                          Webinar
+                        </span>
+                        <h4 className="text-xl font-bold !text-white mb-4 drop-shadow-md leading-tight z-10 relative">
+                          {webinar.title}
+                        </h4>
+
+                        <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-sm font-medium text-gray-200">
+                          <p className="flex items-center gap-2">
+                            <span>📅</span> {webinar.date}
+                          </p>
+                          <p className="flex items-center gap-2">
+                            <span>⏰</span> {webinar.time}
+                          </p>
+                          <p className="flex items-start gap-2">
+                            <span className="mt-1">📍</span>
+                            <span className="leading-snug">{webinar.venue}</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>

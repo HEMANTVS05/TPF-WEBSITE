@@ -13,6 +13,9 @@ import Career from './components/Career';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GenericPage from './components/GenericPage';
+import Gallery from './components/Gallery';
+import WorkshopDetails from './components/WorkshopDetails';
+import WebinarDetails from './components/WebinarDetails';
 import Team from './components/Team';
 import Donate from './components/Donate';
 import SocialSidebar from './components/SocialSidebar';
@@ -70,6 +73,8 @@ const AnimatedRoutes = () => {
         <Route path="/research" element={<PageTransition><Research /></PageTransition>} />
         <Route path="/research/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/events" element={<PageTransition><Events /></PageTransition>} />
+        <Route path="/events/workshops/:id" element={<PageTransition><WorkshopDetails /></PageTransition>} />
+        <Route path="/events/webinars/:id" element={<PageTransition><WebinarDetails /></PageTransition>} />
         <Route path="/events/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/library" element={<PageTransition><Library /></PageTransition>} />
         <Route path="/library/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
@@ -79,7 +84,7 @@ const AnimatedRoutes = () => {
         <Route path="/career/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
         <Route path="/donate" element={<PageTransition><Donate /></PageTransition>} />
-        <Route path="/gallery" element={<PageTransition><GenericPage /></PageTransition>} />
+        <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
     </AnimatePresence>

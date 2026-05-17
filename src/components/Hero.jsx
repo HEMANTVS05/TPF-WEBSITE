@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo.jpeg';
+import websiteBgVideo from '../assets/website_bg.mp4';
 import './Hero.css';
 
 export default function Hero() {
@@ -24,9 +25,24 @@ export default function Hero() {
 
   return (
     <section className="hero bg-gray-50 relative overflow-hidden flex flex-col justify-center min-h-screen md:min-h-[90vh] pt-24" ref={containerRef}>
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+        >
+          <source src={websiteBgVideo} type="video/mp4" />
+        </video>
+        {/* Slight black tint overlay */}
+        <div className="absolute inset-0 bg-black/60 z-10" />
+      </div>
+
       {/* Background Graphic Elements */}
       <motion.div
-        className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(35,141,187,0.1)_0%,_transparent_70%)]"
+        className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(35,141,187,0.3)_0%,_transparent_70%)] pointer-events-none"
         style={{ y: y1, opacity }}
       />
       <div className="absolute bottom-0 left-0 w-full h-[25vh] md:h-[30vh] z-0 pointer-events-none opacity-90">
@@ -55,11 +71,17 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           style={{ opacity }}
         >
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 leading-[1.3]">
-            <span className="reveal-text"><span>COUNCIL OF AQUADEMIC</span></span><br />
-            <span className="reveal-text"><span>RESEARCH AND</span></span><br />
-            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#238dbb] to-[#0f4c75]">COASTAL EMPOWERMENT</span></span><br />
-            <span className="reveal-text"><span>C.A.R.c.E</span></span>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white drop-shadow-lg leading-[1.3] text-center">
+            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8ad4f5] to-[#4eb8e6] drop-shadow-md">COUNCIL OF</span></span>
+            {" "}
+            <span className="reveal-text"><span className="text-white drop-shadow-md">AQUADEMIC</span></span>
+            {" "}
+            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8ad4f5] to-[#4eb8e6] drop-shadow-md">RESEARCH</span></span><br />
+            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8ad4f5] to-[#4eb8e6] drop-shadow-md">AND</span></span><br />
+            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8ad4f5] to-[#4eb8e6] drop-shadow-md">COASTAL</span></span>
+            {" "}
+            <span className="reveal-text"><span className="text-white drop-shadow-md">EMPOWERMENT</span></span><br />
+            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8ad4f5] to-[#4eb8e6] drop-shadow-md">C.A.R.c.E</span></span>
           </h1>
 
           <motion.div
@@ -68,7 +90,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-4 md:mt-6"
           >
-            <span className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-blue-50 to-white border border-blue-100 text-[#0f4c75] font-extrabold text-xs md:text-sm tracking-[0.2em] shadow-sm backdrop-blur-sm">
+            <span className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-md md:text-lg tracking-[0.4em] shadow-lg">
               # Building Blue Legacy #
             </span>
           </motion.div>
@@ -79,7 +101,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href="#about-us" onClick={handleScrollToAbout} className="btn-primary py-3 px-6 md:py-4 md:px-8 shadow-xl">Discover Our Mission</a>
+            <a href="#about-us" onClick={handleScrollToAbout} className="btn-primary py-3 px-6 md:py-4 md:px-8 shadow-xl !text-white">Discover Our Mission</a>
           </motion.div>
         </motion.div>
       </div>
