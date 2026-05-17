@@ -6,7 +6,7 @@ import './Hero.css';
 
 export default function Hero() {
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section className="hero bg-gray-50 relative overflow-hidden flex flex-col justify-center min-h-screen md:min-h-[90vh] pt-24" ref={containerRef}>
       {/* Background Graphic Elements */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(35,141,187,0.1)_0%,_transparent_70%)]"
         style={{ y: y1, opacity }}
       />
@@ -36,7 +36,7 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-20 flex flex-col items-center text-center gap-8 md:gap-10 pb-24 md:pb-32 pt-8 md:pt-16">
-        <motion.div 
+        <motion.div
           className="w-40 h-40 md:w-48 md:h-48 flex justify-center items-center relative"
           initial={{ scale: 0.8, opacity: 0, y: 30 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="max-w-4xl flex flex-col items-center gap-6 md:gap-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,11 +56,12 @@ export default function Hero() {
           style={{ opacity }}
         >
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 leading-[1.3]">
-            <span className="reveal-text"><span>COUNCIL OF AQUADEMIC</span></span><br/>
-            <span className="reveal-text"><span>RESEARCH AND</span></span><br/>
-            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#238dbb] to-[#0f4c75]">COASTAL EMPOWERMENT</span></span>
+            <span className="reveal-text"><span>COUNCIL OF AQUADEMIC</span></span><br />
+            <span className="reveal-text"><span>RESEARCH AND</span></span><br />
+            <span className="reveal-text"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#238dbb] to-[#0f4c75]">COASTAL EMPOWERMENT</span></span><br />
+            <span className="reveal-text"><span>C.A.R.c.E</span></span>
           </h1>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -72,7 +73,7 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="mt-6 md:mt-8 flex gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

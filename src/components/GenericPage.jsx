@@ -8,23 +8,13 @@ import nonTraditionalsecurity from '../assets/non-traditional_sec.jpeg'
 import coastalmaritime from '../assets/coastal&maritime.jpeg'
 import sdg from '../assets/sdgs.jpeg';
 import img2 from '../assets/IMG_2.jpeg';
-import img3 from '../assets/IMG_3.jpeg';
-import img4 from '../assets/IMG_4.jpeg';
-import img5 from '../assets/IMG_5.jpeg';
-import img6 from '../assets/IMG_6.jpeg';
+import workshop from '../assets/workshop.jpeg';
 import img7 from '../assets/IMG_7.jpeg';
-import img8 from '../assets/IMG_8.jpeg';
-import img9 from '../assets/IMG_9.jpeg';
-import img10 from '../assets/IMG_10.jpeg';
-import img11 from '../assets/IMG_11.jpeg';
 import img12 from '../assets/IMG_12.jpeg';
-import img13 from '../assets/IMG_13.jpeg';
-import img14 from '../assets/IMG_14.jpeg';
-import img15 from '../assets/IMG_15.jpeg';
-import img16 from '../assets/IMG_16.jpeg';
-import img17 from '../assets/IMG_17.jpeg';
-import img18 from '../assets/IMG_18.jpeg';
-import img19 from '../assets/IMG_19.jpeg';
+import communityOutreach from '../assets/community_outreach.jpeg';
+import seminarweb from '../assets/seminarweb.jpeg';
+import conference from '../assets/conference.jpeg';
+import internship from '../assets/internship.jpeg';
 
 // Custom content dictionary for the specific research subtopics
 const customContentData = {
@@ -71,7 +61,7 @@ Our conferences go beyond traditional academic boundaries; they bridge policy re
 Participants gain not only insights but also opportunities to form strategic partnerships with stakeholders from academia, government, and civil society. The event concludes with a synthesis of recommendations and policy briefs, ensuring continuity in our mission to influence decision-making and coastal governance.
 At C.A.R.c.E., conferences are more than forums of dialogue; they are incubators of innovation and instruments of transformation. By empowering young researchers and community advocates, we strive to build a future where informed minds lead resilient coasts.
 Anchored in science, inspired by policy, and driven by people, our conferences define the pulse of India’s maritime progress.`,
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
+    image: conference
   },
   '/events/seminars-webinars': {
     title: "Seminar and Webinar",
@@ -79,7 +69,7 @@ Anchored in science, inspired by policy, and driven by people, our conferences d
 
 Our webinars, meanwhile, extend this mission into the digital realm, breaking geographical barriers and creating an inclusive, virtual platform for nationwide participation. Covering subjects from climate change and ocean governance to marine pollution and blue economy strategies, these sessions make knowledge accessible to a global audience. Through interactive Q&A sessions, live polls, and panel discussions, participants engage directly with experts and community voices, ensuring that every dialogue is both educational and participatory. Together, our seminars and webinars create a continuous cycle of learning, reflection, and action, nurturing the next generation of maritime scholars and leaders. Each session concludes with key takeaways that contribute to our broader mission of integrating research, policy, and practice for the sustainable development of India’s coastal regions.
 Through our seminar and webinar platforms, C.A.R.c.E. transforms ideas into impact, inspiring awareness, building capacity, and steering India’s maritime future toward sustainability and security.`,
-    image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1974&auto=format&fit=crop"
+    image: seminarweb
   },
   '/events/workshops': {
     title: "Workshops",
@@ -87,24 +77,24 @@ Through our seminar and webinar platforms, C.A.R.c.E. transforms ideas into impa
 The sessions are facilitated by experienced mentors, maritime experts, and academicians who provide practical insights and real-world case studies. This approach ensures that participants not only acquire theoretical understanding but also learn to apply their knowledge to current issues such as coastal security, marine governance, heritage preservation, and environmental sustainability. Our workshops also emphasise the art of effective communication and critical writing, helping students build confidence in presenting their research findings and writing persuasive, evidence-based articles for academic and media platforms. Editing modules further enhance participants’ ability to refine their work to meet professional standards.
 Beyond technical skills, these workshops nurture collaboration and interdisciplinary thinking. Participants engage in group discussions, brainstorming sessions, and project-based learning, encouraging teamwork and leadership. By the end of each program, students gain a comprehensive skill set and a clearer vision of how they can contribute to India’s maritime sector through informed research, creative writing, and policy-oriented analysis.
 C.A.R.c.E. Workshops are more than learning sessions they are incubators for youth-driven ideas, shaping capable thinkers and doers who will navigate India’s maritime future.`,
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop"
+    image: workshop
   },
   '/events/outreach': {
     title: "Community Outreach",
     content: `At C.A.R.c.E., we believe that knowledge must translate into tangible action. Our Community and Outreach Events reflect our deep commitment to the well-being of India’s coastal communities and marine ecosystems. Through hands-on initiatives like Beach Clean-Ups, Medical Camps, Awareness Drives, and Night Schools, we bring our research and humanitarian values to life.
 
-🏖️ Beach Clean-Ups
+<h3 className="text-2xl font-bold">🏖️ Beach Clean-Ups</h3>
 Our beach clean-up campaigns mobilise youth volunteers and local communities to preserve coastal ecosystems. Beyond removing waste, these initiatives raise awareness about pollution, ocean health, and the importance of sustainable waste management practices. Each clean-up is a call to protect our natural heritage and inspire civic responsibility.
 
-⚕️ Medical Camps
+<h3 className="text-2xl font-bold">⚕️ Medical Camps</h3>
 Health is a cornerstone of community resilience. Our medical camps provide essential healthcare access to remote fishing and coastal populations. In collaboration with local health professionals, we offer medical check-ups, hygiene awareness, and health education, ensuring that maritime development includes human well-being.
 
-📚 Educational & Awareness Drives
+<h3 className="text-2xl font-bold">📚 Educational & Awareness Drives </h3>
 Through night schools, literacy programs, and awareness lectures, we empower children and adults with education and knowledge. Our campaigns highlight themes like marine resource conservation, legal rights, and disaster preparedness ensuring communities are informed, resilient, and self-reliant.
 
 Each of these outreach initiatives demonstrates our holistic approach combining science, policy, and compassion to build sustainable coastal futures.
 Every community program is an act of service, every volunteer an agent of change together, we are shaping a stronger, healthier, and cleaner maritime India.`,
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2073&auto=format&fit=crop"
+    image: communityOutreach
   },
   '/library/publication': {
     title: "Publication",
@@ -128,7 +118,7 @@ This magazine reflects our belief that knowledge should travel beyond academic h
 Regular features include field reports, interviews, expert columns, youth essays, and environmental updates. Topics range from marine conservation and security strategies to sustainable livelihoods and cultural heritage.
 Designed to inform and inspire, the C.A.R.c.E. magazine serves as a creative intersection between research and storytelling. It provides readers with an engaging yet informative look at how science, governance, and community intersect along India's vast coastline. By celebrating youth-led initiatives and community resilience, each issue reinforces our mission to connect knowledge with empathy and research with real-world transformation.
 Every issue is a voyage navigating the currents of change across India's maritime horizon.`,
-    image: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1535954741680-a2e24eb05418?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   '/library/reports': {
     title: "Research Reports",
@@ -138,14 +128,14 @@ These reports not only present findings but also propose actionable recommendati
 C.A.R.c.E. also emphasises youth involvement in research, offering opportunities for young scholars to participate in field projects and contribute to published studies. This hands-on engagement fosters a new generation of maritime researchers and leaders.
 Every report represents more than data; it represents our commitment to transforming research into real-world solutions that protect coastlines, empower communities, and promote sustainable progress.
 Our research reports chart the course toward informed policy, resilient communities, and a sustainable maritime future.`,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+    image: "https://plus.unsplash.com/premium_photo-1661761077411-d50cba031848?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   '/blogs/documentary': {
     title: "Documentary",
     content: `The documentary section brings maritime realities to life through powerful visual storytelling. Each C.A.R.c.E. documentary explores critical themes such as coastal community resilience, marine biodiversity, maritime security, and cultural heritage showcasing both challenges and triumphs from India’s coastline. These documentaries are grounded in rigorous research and fieldwork, blending academic insight with emotional resonance. They serve as visual narratives that amplify the voices of coastal citizens, fishermen, women entrepreneurs, scientists, and policymakers working to protect and develop India’s maritime frontiers.
 Our films not only inform but also inspire. Whether highlighting the impact of climate change on coastal villages, exposing issues like illegal fishing or marine pollution, or celebrating traditional sea-based livelihoods, each documentary reflects our “think-and-do” philosophy combining knowledge with action. Created in collaboration with young filmmakers, researchers, and local communities, our documentaries also serve as educational resources for universities, NGOs, and training institutions. Through cinematic storytelling, we aim to make maritime research accessible, relatable, and transformative.
 Every frame tells a story of the sea of resilience, innovation, and hope along India’s 11,098.81 km coastline.`,
-    image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop"
+    image: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147486350/images/7cda74c-fd18-e66e-5f1f-3af0e852dc26_Sebastian_Solberg_v18.jpg"
   },
   '/blogs/newsletter': {
     title: "Newsletter",
@@ -239,9 +229,10 @@ export default function GenericPage() {
 
           {/* Content Paragraphs */}
           <div className="prose prose-lg max-w-none text-gray-600">
-            <p className="text-lg md:text-xl leading-[1.8] whitespace-pre-line text-justify">
-              {customData.content}
-            </p>
+            <div
+              className="text-lg md:text-xl leading-[1.8] whitespace-pre-line text-justify"
+              dangerouslySetInnerHTML={{ __html: customData.content }}
+            />
           </div>
 
           {/* Action Button */}

@@ -7,8 +7,8 @@ export default function PageBanner({ title, subtitle, imageSrc }) {
       className="relative w-full h-[40vh] md:h-[50vh] min-h-[300px] overflow-hidden shadow-lg bg-fixed bg-center bg-cover"
       style={{ backgroundImage: `url(${imageSrc})` }}
     >
-      <div className="absolute inset-0 bg-[#0f4c75]/40 mix-blend-multiply"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-[#0f4c75]/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-[#0f4c75]/20 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-[#0f4c75]/20 to-transparent"></div>
       
       <div className="absolute bottom-0 left-0 w-full p-10 md:p-16 flex flex-col items-center justify-end text-center z-10 h-full">
         <motion.h1 

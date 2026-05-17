@@ -7,7 +7,7 @@ export default function Donate() {
   const [selectedAmount, setSelectedAmount] = useState(null);
   const [customAmount, setCustomAmount] = useState('');
 
-  const amounts = [100, 200, 300, 400, 500];
+  const amounts = [500, 1000, 1500, 2000, 2500];
 
   const handleAmountClick = (amount) => {
     setSelectedAmount(amount);
@@ -29,13 +29,13 @@ export default function Donate() {
 
   return (
     <div className="bg-gray-50 min-h-screen pb-24">
-      <PageBanner 
-        title="Support Our Cause" 
-        imageSrc="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?q=80&w=2070&auto=format&fit=crop" 
+      <PageBanner
+        title="Support Our Cause"
+        imageSrc="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?q=80&w=2070&auto=format&fit=crop"
       />
 
       <div className="container max-w-4xl mx-auto px-4 pt-16 relative z-10">
-        <motion.div 
+        <motion.div
           className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-blue-50 relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,11 +64,10 @@ export default function Donate() {
                   <button
                     key={amount}
                     onClick={() => handleAmountClick(amount)}
-                    className={`py-3 px-2 rounded-2xl font-bold text-lg transition-all duration-300 border-2 flex items-center justify-center gap-1 ${
-                      selectedAmount === amount 
-                        ? 'bg-[#0f4c75] text-white border-[#0f4c75] shadow-lg transform scale-105' 
+                    className={`py-3 px-2 rounded-2xl font-bold text-lg transition-all duration-300 border-2 flex items-center justify-center gap-1 ${selectedAmount === amount
+                        ? 'bg-[#0f4c75] text-white border-[#0f4c75] shadow-lg transform scale-105'
                         : 'bg-white text-[#0f4c75] border-blue-100 hover:border-[#238dbb] hover:bg-blue-50'
-                    }`}
+                      }`}
                   >
                     <IndianRupee size={18} strokeWidth={3} /> {amount}
                   </button>
@@ -86,9 +85,8 @@ export default function Donate() {
                   placeholder="Enter custom amount"
                   value={customAmount}
                   onChange={handleCustomAmountChange}
-                  className={`w-full pl-12 pr-4 py-4 rounded-2xl border-2 outline-none text-lg font-bold text-gray-800 transition-all ${
-                    customAmount ? 'border-[#0f4c75] bg-blue-50/30' : 'border-gray-200 focus:border-[#238dbb]'
-                  }`}
+                  className={`w-full pl-12 pr-4 py-4 rounded-2xl border-2 outline-none text-lg font-bold text-gray-800 transition-all ${customAmount ? 'border-[#0f4c75] bg-blue-50/30' : 'border-gray-200 focus:border-[#238dbb]'
+                    }`}
                 />
               </div>
             </div>
@@ -109,12 +107,11 @@ export default function Donate() {
             </div>
 
             {/* Submit Button */}
-            <button 
-              className={`w-full py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-xl ${
-                currentDonation > 0 
-                  ? 'bg-gradient-to-r from-[#0f4c75] to-[#238dbb] text-white hover:shadow-2xl hover:scale-[1.02]' 
+            <button
+              className={`w-full py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-xl ${currentDonation > 0
+                  ? 'bg-gradient-to-r from-[#0f4c75] to-[#238dbb] text-white hover:shadow-2xl hover:scale-[1.02]'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              }`}
+                }`}
               disabled={!currentDonation || currentDonation <= 0}
             >
               Donate <IndianRupee size={20} strokeWidth={3} /> {currentDonation || '0'} Now

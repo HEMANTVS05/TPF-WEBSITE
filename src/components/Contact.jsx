@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import PageBanner from './PageBanner';
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Message from ${name || 'Website Visitor'}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:c.a.r.c.eindia@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="bg-gray-50 border-t border-gray-200 min-h-screen">
       <PageBanner 
@@ -21,17 +32,17 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-3xl font-bold mb-8 text-gray-900">Send us a message</h3>
-            <form className="flex flex-col gap-6">
+            <form className="flex flex-col gap-6" onSubmit={handleSend}>
               <div>
-                <input type="text" placeholder="Your Name" className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#238dbb]/50 focus:border-[#238dbb] transition-all" />
+                <input type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#238dbb]/50 focus:border-[#238dbb] transition-all" />
               </div>
               <div>
-                <input type="email" placeholder="Your Email" className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#238dbb]/50 focus:border-[#238dbb] transition-all" />
+                <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#238dbb]/50 focus:border-[#238dbb] transition-all" />
               </div>
               <div>
-                <textarea placeholder="Your Message" rows="5" className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#238dbb]/50 focus:border-[#238dbb] transition-all resize-none"></textarea>
+                <textarea placeholder="Your Message" rows="5" value={message} onChange={(e) => setMessage(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#238dbb]/50 focus:border-[#238dbb] transition-all resize-none"></textarea>
               </div>
-              <button type="button" className="btn-primary w-full shadow-md">Send Message</button>
+              <button type="submit" className="btn-primary w-full shadow-md">Send Message</button>
             </form>
           </motion.div>
           
