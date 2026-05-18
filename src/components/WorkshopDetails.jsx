@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Users, User, ArrowLeft } from 'lucide-react';
+import poster1 from '../assets/poster_1.jpeg';
 import poster2 from '../assets/workshop_poster_2.jpg';
 import poster3 from '../assets/workshop_poster_3.png';
 
@@ -20,7 +21,7 @@ const workshopData = {
     date: 'August 11, 2025',
     time: '10:00 AM onwards',
     mode: 'Offline',
-    poster: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop' // Placeholder
+    poster: poster1
   },
   '2': {
     title: 'Newswriting and Designing in the Domain of Maritime Security',

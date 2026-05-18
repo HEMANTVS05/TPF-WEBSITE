@@ -17,10 +17,12 @@ import conference from '../assets/conference.jpeg';
 import internship from '../assets/internship.jpeg';
 import volunteers from '../assets/volunteers.jpeg';
 import { Link } from 'react-router-dom';
+import poster1 from '../assets/poster_1.jpeg';
 import poster2 from '../assets/workshop_poster_2.jpg';
 import poster3 from '../assets/workshop_poster_3.png';
 import webinarPoster1 from '../assets/webinar_poster_1.jpg';
 import webinarPoster2 from '../assets/webinar_poster_2.jpg';
+import InteractiveCalendar from './InteractiveCalendar';
 
 // Webinar cards data for the /events/seminars-webinars route
 const webinarCardsData = [
@@ -50,7 +52,7 @@ const workshopCardsData = [
     date: 'Aug 11, 2025',
     time: '10:00 AM',
     venue: 'University of Madras, Chennai',
-    poster: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop'
+    poster: poster1
   },
   {
     id: '2',
@@ -105,7 +107,8 @@ This interactive calendar allows students, researchers, policymakers, and volunt
 Whether you are a young scholar seeking to present research, a professional interested in maritime law, or a community member eager to contribute to local initiatives, our event calendar opens the door to collaboration.
 At C.A.R.c.E., we believe that impactful change is possible only when knowledge and action meet consistency and coordination. The annual calendar is more than a schedule; it is a reflection of our journey through research, innovation, and community service.
 Stay tuned. Stay informed. Stay involved because every event brings us closer to a secure and sustainable maritime future.`,
-    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop",
+    hasInteractiveCalendar: true
   },
   '/events/conference': {
     title: "Conference",
@@ -279,6 +282,13 @@ export default function GenericPage() {
           {/* Title */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-10 leading-tight">{customData.title}</h2>
 
+          {/* Interactive Calendar Section */}
+          {customData.hasInteractiveCalendar && (
+            <div className="mb-12">
+              <InteractiveCalendar />
+            </div>
+          )}
+
           {/* Landscape Static Image */}
           <div className="w-full mb-12 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 border-4 border-white">
             <img src={customData.image} alt={customData.title} className="w-full h-auto md:max-h-[500px] object-cover" />
@@ -330,14 +340,14 @@ export default function GenericPage() {
           {customData.hasWorkshopCards && (
             <div className="mt-16 border-t border-gray-200 pt-16">
               <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Upcoming & Past Workshops</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {workshopCardsData.map((workshop) => (
                   <Link
                     to={`/events/workshops/${workshop.id}`}
                     key={workshop.id}
-                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block"
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block transform hover:-translate-y-2"
                   >
-                    <div className="aspect-[3/4] relative overflow-hidden">
+                    <div className="aspect-[2/3] relative overflow-hidden">
                       <img
                         src={workshop.poster}
                         alt={workshop.title}

@@ -1,7 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import PageBanner from './PageBanner';
 import { Heart, IndianRupee } from 'lucide-react';
+
+const RazorpayForm = React.memo(() => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
+    script.setAttribute('data-payment_button_id', 'pl_RaTAFhvPRBYrIr');
+    script.async = true;
+    
+    const form = document.getElementById('razorpay-form');
+    if (form && form.children.length === 0) {
+      form.appendChild(script);
+    }
+  }, []);
+
+  return <form id="razorpay-form" className="hidden"></form>;
+});
 
 export default function Donate() {
   const [selectedAmount, setSelectedAmount] = useState(null);
@@ -107,7 +123,12 @@ export default function Donate() {
             </div>
 
             {/* Submit Button */}
+            <RazorpayForm />
             <button
+              onClick={() => {
+                const rzpBtn = document.querySelector('.razorpay-payment-button');
+                if (rzpBtn) rzpBtn.click();
+              }}
               className={`w-full py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-xl ${currentDonation > 0
                   ? 'bg-gradient-to-r from-[#0f4c75] to-[#238dbb] text-white hover:shadow-2xl hover:scale-[1.02]'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
