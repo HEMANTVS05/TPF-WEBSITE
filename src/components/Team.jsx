@@ -165,25 +165,25 @@ const advisoryCouncil = [
     image: hillar
   },
   {
-    name: "Dr. R. SRINIVASAN",
-    role: "Group Captain",
+    name: "Group Captain Dr. R. SRINIVASAN",
+    role: "Indian Air Force",
     desc: "Dr. R. Srinivasan is a distinguished former officer of the Indian Air Force, strategic affairs researcher, and academic writer who served the nation for 33 years before retiring in 2018 with the rank of Group Captain. During his service career, he contributed extensively to defence administration and national security–related activities and was awarded the prestigious Visisht Seva Medal (VSM) by the President of India in 2012 for distinguished service of a high order. Academically accomplished, he holds degrees in MSW and LLB, along with a Postgraduate Diploma in International Humanitarian Law, and earned his Ph.D. in Political Sociology from Pondicherry University. Following his retirement, he has continued his engagement in strategic and social research as an Independent Researcher and currently serves as the Editor-in-Chief of the Electronic Journal of Social and Strategic Studies. Dr. Srinivasan is an internationally published and SCOPUS-indexed author with numerous book chapters and conference papers focusing on governance, regionalism, political economy, human rights, and strategic affairs. He is also a Senior Fellow at Defense Research and Studies (DRaS), a think tank dedicated to defence and strategic analysis, and regularly contributes articles and research papers to organizations such as Chennai Centre for China Studies and Kalinga International Foundation. Through his writings, lectures, and policy-oriented research, he continues to contribute significantly to discussions on international relations, security studies, governance, and regional strategic developments.",
     image: srinivasan
   },
   {
-    name: "SANTOSH NAMBY CHANDRAN",
+    name: "Mr. SANTOSH NAMBY CHANDRAN",
     role: "IG cum Principal Chief Security Commissioner",
     desc: "Mr. Santosh Namby Chandran is a senior Indian Railway Protection Force Service (IRPFS) officer from the 1998 batch of UPSC recruits. Born on 14 March 1972 in Bangalore, Karnataka, he holds an MS in Ecology and a PGDBA in Finance. He has served in several key security and administrative roles in Indian Railways, including DIG-cum-Chief Security Commissioner of Southern Railway, and later as Inspector General-cum-Principal Chief Security Commissioner. During his career, he received the Indian Police Medal for Meritorious Service and multiple departmental commendations for his contributions to railway security, leadership, and public service.",
     image: santosh
   },
   {
-    name: "MR. D. THIRUMARAN",
+    name: "Mr. D. THIRUMARAN",
     role: "Assistant Professor and Head",
     desc: "Prof. D. Thirumaran is an academician and researcher serving as Assistant Professor and Head of the PG and Research Department of Defence and Strategic Studies at Voorhees College. With more than two decades of teaching experience, he has made significant contributions to the field of defence and strategic studies through teaching, research, academic administration, and scholarly publications. He earned his M.A. in Defence Studies as a Gold Medalist, completed an M.Phil in Defence Studies, and also holds an M.A. in Political Science. Prof. Thirumaran has actively served on various academic and curriculum development boards and has authored and edited several books related to defence, security, and political studies. Recognized for his dedication to education and public service, he has received several honours, including the “Covid Warrior” Award and the “Best Educationist Award.” He has also participated extensively in national seminars, conferences, and workshops as a resource person, contributing to discussions on national security, strategic affairs, and contemporary geopolitical issues. ",
     image: thirumaran
   },
   {
-    name: "DR. O. NIRMALA",
+    name: "Dr. O. NIRMALA",
     role: "Assistant Professor and Head",
     desc: "Dr. O. Nirmala, M.A., Ph.D., serves as the Assistant Professor and Head of the Department of Defence and Strategic Studies and Dean, School of Humanities at Guru Nanak College. She completed her Ph.D. from University of Madras on the strategic significance of the Indian Ocean in India’s energy security and qualified UGC-NET/JRF in 2009. Her academic expertise includes maritime security, environmental security, artificial intelligence in defence, and strategic studies. She has published research papers and book chapters in reputed journals and conference proceedings and actively participates as a resource person and presenter at national and international academic conferences and workshops.",
     image: nirmala
