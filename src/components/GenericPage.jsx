@@ -14,7 +14,6 @@ import img12 from '../assets/IMG_12.jpeg';
 import communityOutreach from '../assets/community_outreach.jpeg';
 import seminarweb from '../assets/seminarweb.jpeg';
 import conference from '../assets/conference.jpeg';
-import internship from '../assets/internship.jpeg';
 import volunteers from '../assets/volunteers.jpeg';
 import { Link } from 'react-router-dom';
 import poster1 from '../assets/poster_1.jpeg';
@@ -23,6 +22,7 @@ import poster3 from '../assets/workshop_poster_3.png';
 import webinarPoster1 from '../assets/webinar_poster_1.jpg';
 import webinarPoster2 from '../assets/webinar_poster_2.jpg';
 import InteractiveCalendar from './InteractiveCalendar';
+import internship from '../assets/internship.jpeg';
 
 // Webinar cards data for the /events/seminars-webinars route
 const webinarCardsData = [
@@ -322,14 +322,14 @@ export default function GenericPage() {
             <div className="mt-16 border-t border-gray-200 pt-16">
               <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Featured Documentary</h3>
               <div className="aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-black">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src={`https://www.youtube.com/embed/${customData.hasYouTubeVideo}?autoplay=0&rel=0`} 
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${customData.hasYouTubeVideo}?autoplay=0&rel=0`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                 ></iframe>
               </div>

@@ -24,6 +24,15 @@ export default function InteractiveCalendar() {
   const [displayedYear, setDisplayedYear] = useState(new Date().getFullYear());
   const [displayedMonth, setDisplayedMonth] = useState(new Date().getMonth());
 
+  const handleSearch = (year) => {
+    if (VALID_YEARS.includes(year)) {
+      setSearchYear(year);
+      const eventsInYear = EVENTS.filter(e => e.date.startsWith(year.toString()));
+      setActiveYearEvents(eventsInYear);
+      setDisplayedYear(year);
+    }
+  };
+
   useEffect(() => {
     // Keep displayed year within bounds on mount
     let initialYear = new Date().getFullYear();
@@ -33,15 +42,6 @@ export default function InteractiveCalendar() {
     setSearchYear(initialYear);
     handleSearch(initialYear);
   }, []);
-
-  const handleSearch = (year) => {
-    if (VALID_YEARS.includes(year)) {
-      setSearchYear(year);
-      const eventsInYear = EVENTS.filter(e => e.date.startsWith(year.toString()));
-      setActiveYearEvents(eventsInYear);
-      setDisplayedYear(year);
-    }
-  };
 
   const jumpToEvent = (dateString) => {
     const [year, month, _] = dateString.split('-');
