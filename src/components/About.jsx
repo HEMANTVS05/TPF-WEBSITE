@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Microscope, BookOpen, Handshake, Settings, Eye, Target } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import aboutImg from '../assets/IMG_1.jpeg';
 
 const objectives = [
   {
     title: "Research",
-    icon: "🔬",
+    icon: Microscope,
     color: "text-[#0f4c75] bg-[#238dbb]/10",
     cardBg: "bg-gradient-to-br from-blue-50 to-white border border-blue-100",
     textColor: "text-[#0f4c75]",
@@ -21,7 +22,7 @@ const objectives = [
   },
   {
     title: "Knowledge Center",
-    icon: "📚",
+    icon: BookOpen,
     color: "text-white bg-white/10 border border-white/20",
     cardBg: "bg-[#0f4c75]",
     textColor: "!text-white",
@@ -35,7 +36,7 @@ const objectives = [
   },
   {
     title: "Collaborative & Community-Connected",
-    icon: "🤝",
+    icon: Handshake,
     color: "text-white bg-white/10 border border-white/20",
     cardBg: "bg-[#0f4c75]",
     textColor: "!text-white",
@@ -49,7 +50,7 @@ const objectives = [
   },
   {
     title: "Application",
-    icon: "⚙️",
+    icon: Settings,
     color: "text-[#0f4c75] bg-[#238dbb]/10",
     cardBg: "bg-gradient-to-br from-blue-50 to-white border border-blue-100",
     textColor: "text-[#0f4c75]",
@@ -110,8 +111,8 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="absolute -right-4 -top-4 text-9xl opacity-[0.03] group-hover:scale-110 transition-transform duration-700 pointer-events-none">👁️</div>
-            <div className="w-16 h-16 bg-[#238dbb]/10 text-[#0f4c75] rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-blue-100">👁️</div>
+            <div className="absolute -right-4 -top-4 opacity-[0.03] group-hover:scale-110 transition-transform duration-700 pointer-events-none"><Eye className="w-32 h-32" /></div>
+            <div className="w-16 h-16 bg-[#238dbb]/10 text-[#0f4c75] rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-blue-100"><Eye className="w-8 h-8" /></div>
             <h3 className="text-3xl font-bold text-[#0f4c75] mb-4">Vision</h3>
             <p className="text-lg text-gray-700 leading-relaxed">
               To evolve into a leading research and knowledge hub promoting mentored, youth-driven ventures dedicated to maritime security advancement, with a particular focus on all aspects of India’s coastal security and development.
@@ -125,8 +126,8 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="absolute -right-4 -bottom-4 text-9xl opacity-[0.05] group-hover:scale-110 transition-transform duration-700 pointer-events-none">🎯</div>
-            <div className="w-16 h-16 bg-white/10 text-white rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-white/20">🎯</div>
+            <div className="absolute -right-4 -bottom-4 opacity-[0.05] group-hover:scale-110 transition-transform duration-700 pointer-events-none"><Target className="w-32 h-32" /></div>
+            <div className="w-16 h-16 bg-white/10 text-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-white/20"><Target className="w-8 h-8" /></div>
             <h3 className="text-3xl font-bold !text-white mb-4">Mission</h3>
             <p className="text-lg text-blue-100 leading-relaxed">
               To empower coastal communities, we aim to enhance knowledge through innovative research, education, and grassroots volunteerism. We believe in the transformative power of youth-led social impact initiatives that not only uplift local coastal societies but also inspire the next generation of leaders. An emphasis on collaboration will empower youth to lead impactful steps and enterprises, encouraging ownership and responsibility within their communities. By prioritising academic excellence and humanitarian initiatives, we seek to build meaningful connections with coastal societies, create abundant opportunities for young minds, and champion sustainable development.
@@ -148,11 +149,13 @@ export default function About() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="absolute -right-4 -bottom-4 text-9xl opacity-[0.03] group-hover:scale-110 transition-transform duration-700 pointer-events-none">{obj.icon}</div>
+                <div className="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:scale-110 transition-transform duration-700 pointer-events-none">
+                  <obj.icon className="w-32 h-32" />
+                </div>
 
                 <div className="flex items-center gap-4 mb-8 relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-sm ${obj.color}`}>
-                    {obj.icon}
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm ${obj.color}`}>
+                    <obj.icon className="w-8 h-8" />
                   </div>
                   <h4 className={`text-2xl md:text-3xl font-bold ${obj.textColor}`}>{obj.title}</h4>
                 </div>
