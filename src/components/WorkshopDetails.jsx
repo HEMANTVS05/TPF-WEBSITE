@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, MapPin, Users, User, ArrowLeft } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users, User, ArrowLeft, Info, Image as ImageIcon } from 'lucide-react';
 import poster1 from '../assets/poster_1.jpeg';
 import poster2 from '../assets/workshop_poster_2.jpg';
 import poster3 from '../assets/workshop_poster_3.png';
@@ -104,7 +104,7 @@ export default function WorkshopDetails() {
           <div className="p-6 md:p-10 flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-2/3">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#238dbb]">ℹ️</span>
+                <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#238dbb]"><Info size={20} /></span>
                 About the Workshop
               </h2>
               <div className="prose prose-lg text-gray-600 leading-relaxed text-justify mb-10 whitespace-pre-line">
@@ -130,7 +130,7 @@ export default function WorkshopDetails() {
 
               <div className="mt-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#238dbb]">🖼️</span>
+                  <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#238dbb]"><ImageIcon size={20} /></span>
                   Event Poster
                 </h3>
                 <img src={data.poster} alt={data.title} className="w-full h-auto rounded-3xl shadow-xl border border-gray-100 object-cover" />

@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Calendar, Landmark, MonitorPlay, FileText, Handshake } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import PageBanner from './PageBanner';
 
 const eventsList = [
-  { title: "Calendar", desc: "Annual academic, policy, and community engagement initiatives.", icon: "📅", colSpan: "md:col-span-2", bg: "bg-gradient-to-br from-blue-50 to-white", textCol: "text-[#0f4c75]", link: "/events/calendar" },
-  { title: "Conference", desc: "Premier knowledge-sharing and networking platforms.", icon: "🏛️", colSpan: "md:col-span-1", bg: "bg-white", textCol: "text-gray-900", link: "/events/conference" },
-  { title: "Seminar and Webinar", desc: "Dynamic platforms for intellectual exchange and learning.", icon: "💻", colSpan: "md:col-span-1", bg: "bg-white", textCol: "text-gray-900", link: "/events/seminars-webinars" },
-  { title: "Workshops", desc: "Hands-on learning bridging academic and real-world application.", icon: "📝", colSpan: "md:col-span-1", bg: "bg-white", textCol: "text-gray-900", link: "/events/workshops" },
-  { title: "Community Outreach", desc: "Grassroots initiatives like beach clean-ups and medical camps.", icon: "🤝", colSpan: "md:col-span-1", bg: "bg-[#0f4c75]", textCol: "text-white", link: "/events/outreach" }
+  { title: "Calendar", desc: "Annual academic, policy, and community engagement initiatives.", icon: Calendar, colSpan: "md:col-span-2", bg: "bg-gradient-to-br from-blue-50 to-white", textCol: "text-[#0f4c75]", link: "/events/calendar" },
+  { title: "Conference", desc: "Premier knowledge-sharing and networking platforms.", icon: Landmark, colSpan: "md:col-span-1", bg: "bg-white", textCol: "text-gray-900", link: "/events/conference" },
+  { title: "Seminar and Webinar", desc: "Dynamic platforms for intellectual exchange and learning.", icon: MonitorPlay, colSpan: "md:col-span-1", bg: "bg-white", textCol: "text-gray-900", link: "/events/seminars-webinars" },
+  { title: "Workshops", desc: "Hands-on learning bridging academic and real-world application.", icon: FileText, colSpan: "md:col-span-1", bg: "bg-white", textCol: "text-gray-900", link: "/events/workshops" },
+  { title: "Community Outreach", desc: "Grassroots initiatives like beach clean-ups and medical camps.", icon: Handshake, colSpan: "md:col-span-1", bg: "bg-[#0f4c75]", textCol: "text-white", link: "/events/outreach" }
 ];
 
 export default function Events() {
@@ -37,12 +38,12 @@ export default function Events() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link to={event.link} className="absolute inset-0 z-20"></Link>
-              <div className="absolute -right-8 -bottom-8 text-9xl opacity-5 group-hover:scale-110 transition-transform duration-500">
-                {event.icon}
+              <div className="absolute -right-8 -bottom-8 opacity-5 group-hover:scale-110 transition-transform duration-500">
+                <event.icon className="w-64 h-64" />
               </div>
               <div className="relative z-10 flex flex-col h-full justify-between gap-8">
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-sm ${event.bg === 'bg-[#0f4c75]' ? 'bg-white/20 border border-white/20' : 'bg-blue-50 border border-blue-100'}`}>
-                  {event.icon}
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm ${event.bg === 'bg-[#0f4c75]' ? 'bg-white/20 border border-white/20 text-white' : 'bg-blue-50 border border-blue-100 text-[#238dbb]'}`}>
+                  <event.icon className="w-8 h-8" />
                 </div>
                 <div>
                   <h3 className={`text-2xl font-bold mb-3 ${event.textCol}`}>{event.title}</h3>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import PageBanner from './PageBanner';
 
 export default function Contact() {
@@ -62,8 +63,8 @@ export default function Contact() {
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-blue-50 text-[#238dbb] flex justify-center items-center text-xl shadow-sm shrink-0">
-                    📧
+                  <div className="w-14 h-14 rounded-full bg-blue-50 text-[#238dbb] flex justify-center items-center shadow-sm shrink-0">
+                    <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-[#0f4c75] font-bold">Email</h4>
@@ -73,8 +74,8 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-blue-50 text-[#238dbb] flex justify-center items-center text-xl shadow-sm shrink-0">
-                    📞
+                  <div className="w-14 h-14 rounded-full bg-blue-50 text-[#238dbb] flex justify-center items-center shadow-sm shrink-0">
+                    <Phone className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-[#0f4c75] font-bold">Phone</h4>
@@ -83,8 +84,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-blue-50 text-[#238dbb] flex justify-center items-center text-xl shadow-sm shrink-0">
-                    📍
+                  <div className="w-14 h-14 rounded-full bg-blue-50 text-[#238dbb] flex justify-center items-center shadow-sm shrink-0">
+                    <MapPin className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-[#0f4c75] font-bold">Headquarters</h4>

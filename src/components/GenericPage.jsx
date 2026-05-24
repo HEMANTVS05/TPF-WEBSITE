@@ -23,6 +23,7 @@ import webinarPoster1 from '../assets/webinar_poster_1.jpg';
 import webinarPoster2 from '../assets/webinar_poster_2.jpg';
 import InteractiveCalendar from './InteractiveCalendar';
 import internship from '../assets/internship.jpeg';
+import { Calendar, Clock, MapPin, Construction, Umbrella, Activity, BookOpen, MessageCircle, GraduationCap } from 'lucide-react';
 
 // Webinar cards data for the /events/seminars-webinars route
 const webinarCardsData = [
@@ -142,13 +143,13 @@ C.A.R.c.E. Workshops are more than learning sessions they are incubators for you
     title: "Community Outreach",
     content: `At C.A.R.c.E., we believe that knowledge must translate into tangible action. Our Community and Outreach Events reflect our deep commitment to the well-being of India’s coastal communities and marine ecosystems. Through hands-on initiatives like Beach Clean-Ups, Medical Camps, Awareness Drives, and Night Schools, we bring our research and humanitarian values to life.
 
-<h3 className="text-2xl font-bold">🏖️ Beach Clean-Ups</h3>
+<h3 class="text-2xl font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-umbrella"><path d="M22 12a10.06 10.06 1 1 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></svg> Beach Clean-Ups</h3>
 Our beach clean-up campaigns mobilise youth volunteers and local communities to preserve coastal ecosystems. Beyond removing waste, these initiatives raise awareness about pollution, ocean health, and the importance of sustainable waste management practices. Each clean-up is a call to protect our natural heritage and inspire civic responsibility.
 
-<h3 className="text-2xl font-bold">⚕️ Medical Camps</h3>
+<h3 class="text-2xl font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Medical Camps</h3>
 Health is a cornerstone of community resilience. Our medical camps provide essential healthcare access to remote fishing and coastal populations. In collaboration with local health professionals, we offer medical check-ups, hygiene awareness, and health education, ensuring that maritime development includes human well-being.
 
-<h3 className="text-2xl font-bold">📚 Educational & Awareness Drives </h3>
+<h3 class="text-2xl font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Educational & Awareness Drives </h3>
 Through night schools, literacy programs, and awareness lectures, we empower children and adults with education and knowledge. Our campaigns highlight themes like marine resource conservation, legal rights, and disaster preparedness ensuring communities are informed, resilient, and self-reliant.
 
 Each of these outreach initiatives demonstrates our holistic approach combining science, policy, and compassion to build sustainable coastal futures.
@@ -232,7 +233,7 @@ Be a volunteer with C.A.R.c.E., because every small act can make a tidal impact.
     actionButton: {
       text: "Join our WhatsApp Group",
       url: "https://chat.whatsapp.com/BT05h94hidPLNL7B1RxpD5?mlu=2&s=cl&p=a",
-      icon: "💬",
+      icon: <MessageCircle size={24} />,
       color: "bg-[#25D366] hover:bg-[#1da851] text-white"
     }
   },
@@ -247,7 +248,7 @@ Embark on your journey with C.A.R.c.E. where learning sails beyond classrooms, a
     actionButton: {
       text: "Apply Now for Internship",
       url: "https://docs.google.com/forms/d/e/1FAIpQLSf0H4etrRCVBb8C0Oe6dG_AEIf73qp3ZdXZ2elton4EnpTdnA/viewform?usp=sharing&ouid=109014665665869315060",
-      icon: "🎓",
+      icon: <GraduationCap size={24} />,
       color: "bg-[#0f4c75] hover:bg-[#238dbb] text-white"
     }
   }
@@ -366,13 +367,13 @@ export default function GenericPage() {
 
                         <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-sm font-medium text-gray-200">
                           <p className="flex items-center gap-2">
-                            <span>📅</span> {workshop.date}
+                            <Calendar size={16} /> {workshop.date}
                           </p>
                           <p className="flex items-center gap-2">
-                            <span>⏰</span> {workshop.time}
+                            <Clock size={16} /> {workshop.time}
                           </p>
                           <p className="flex items-start gap-2">
-                            <span className="mt-1">📍</span>
+                            <MapPin size={16} className="mt-1 shrink-0" />
                             <span className="leading-snug">{workshop.venue}</span>
                           </p>
                         </div>
@@ -414,13 +415,13 @@ export default function GenericPage() {
 
                         <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-sm font-medium text-gray-200">
                           <p className="flex items-center gap-2">
-                            <span>📅</span> {webinar.date}
+                            <Calendar size={16} /> {webinar.date}
                           </p>
                           <p className="flex items-center gap-2">
-                            <span>⏰</span> {webinar.time}
+                            <Clock size={16} /> {webinar.time}
                           </p>
                           <p className="flex items-start gap-2">
-                            <span className="mt-1">📍</span>
+                            <MapPin size={16} className="mt-1 shrink-0" />
                             <span className="leading-snug">{webinar.venue}</span>
                           </p>
                         </div>
@@ -461,7 +462,7 @@ export default function GenericPage() {
 
       <div className="container relative z-10 pt-20 text-center">
         <div className="bg-white rounded-3xl p-12 shadow-xl shadow-blue-900/5 max-w-3xl mx-auto border border-gray-100">
-          <div className="text-6xl mb-6 opacity-80">🚧</div>
+          <div className="flex justify-center mb-6 opacity-80"><Construction size={64} className="text-[#0f4c75]" /></div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-6">{title}</h2>
           <p className="text-gray-500 text-lg md:text-xl leading-relaxed">
             This section is currently under development. The complete content for {title} will be uploaded soon.

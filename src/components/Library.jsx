@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { BookOpen, Newspaper, BookText, BarChart } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import PageBanner from './PageBanner';
 
 const libraryItems = [
-  { title: "Publication", icon: "📚", color: "from-blue-400 to-blue-600", link: "/library/publication" },
-  { title: "Articles", icon: "📰", color: "from-cyan-400 to-cyan-600", link: "/library/articles" },
-  { title: "Monthly Magazines", icon: "📖", color: "from-sky-400 to-sky-600", link: "/library/magazines" },
-  { title: "Research Report", icon: "📊", color: "from-[#238dbb] to-[#0f4c75]", link: "/library/reports" }
+  { title: "Publication", icon: BookOpen, color: "from-blue-400 to-blue-600", link: "/library/publication" },
+  { title: "Articles", icon: Newspaper, color: "from-cyan-400 to-cyan-600", link: "/library/articles" },
+  { title: "Monthly Magazines", icon: BookText, color: "from-sky-400 to-sky-600", link: "/library/magazines" },
+  { title: "Research Report", icon: BarChart, color: "from-[#238dbb] to-[#0f4c75]", link: "/library/reports" }
 ];
 
 export default function Library() {
@@ -38,8 +39,8 @@ export default function Library() {
                 {/* Background Gradient Blob on Hover */}
                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-0`}></div>
                 
-                <div className="relative z-10 text-6xl mb-8 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 drop-shadow-sm">
-                  {item.icon}
+                <div className="relative z-10 mb-8 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 drop-shadow-sm text-[#0f4c75]">
+                  <item.icon className="w-16 h-16" />
                 </div>
                 <h3 className="relative z-10 text-2xl font-bold text-gray-900 group-hover:text-[#0f4c75] transition-colors duration-500">
                   {item.title}
@@ -63,9 +64,9 @@ export default function Library() {
         >
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-30"></div>
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Looking for a specific archive?</h3>
-            <p className="text-blue-200 text-lg mb-8 max-w-2xl mx-auto">Access decades of marine research data, legal frameworks, and coastal studies through our digital portal.</p>
-            <button className="bg-white text-[#0f4c75] font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all">Search the Archives</button>
+            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Want to Contribute?</h3>
+            <p className="text-blue-200 text-lg mb-8 max-w-2xl mx-auto">We welcome insights, articles, and research from scholars, researchers, and maritime professionals to be featured in our library.</p>
+            <Link to="/contact" className="inline-block bg-white text-[#0f4c75] font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all">Submit Your Work</Link>
           </div>
         </motion.div>
       </div>
