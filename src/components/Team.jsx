@@ -23,7 +23,7 @@ import aman from '../assets/aman.png'
 import utham from '../assets/utham.png'
 import manickam from '../assets/manickam.png'
 import prabhakaran from '../assets/prabhakaran.png'
-import hillar from '../assets/hiller.png'   
+import hillar from '../assets/hiller.png'
 import srinivasan from '../assets/srinivasan.png'
 import santosh from '../assets/santhosh.png'
 import thirumaran from '../assets/thiru.png'
@@ -92,13 +92,13 @@ const governingCouncil = [
   {
     name: "Ms Tejesvi",
     role: "SOCIAL MEDIA HEAD",
-    desc: "Tejesvi is a social media manager with a background in Journalism and Defence & Strategic Studies. She excels in copywriting, social media management, and editing. With a passion for storytelling, she creates engaging content and drives digital engagement. She brings a unique perspective to her work, focusing on effective communication and innovative solutions.",
+    desc: "Tejesvi is currently working as an Associate Video Producer at The Hindu. With a background in journalism and defence studies, Tejesvi holds a B.A. in Journalism and an M.A. in Defence Studies. Experienced in video editing, social media management, and content production, Tejesvi also possesses strong communication, teamwork, and coordination skills with a keen eye for digital storytelling.",
     image: tejesvi
   },
   {
     name: "Mr Yukesh Ramesh",
     role: "Internship co-ordinator",
-    desc: "Yukesh Ramesh, a postgraduate of Defence and Strategic Studies, is intrigued by the scope of security challenges. His expertise spans diverse security domains, reinforced by an internship at the Defence Research and Development Organisation (DRDO), yet he is particularly drawn towards energy politics with its evolving landscapes. To further consolidate his knowledge in this area, he has undertaken relevant certificate courses, including Politics and Economics of International Energy from SciencesPo university, Energy Efficiency Indicators: Essentials for Policy Making from the International Energy Agency (IEA), and Control of Radioactive Material Inadvertently Incorporated Into Scrap Metals from the International Atomic Energy Agency (IAEA). Equally important, his engagement in social volunteerism has significantly shaped him, and he has a sustained record of National Service engagement throughout his undergraduate and postgraduate studies. Enlightened by the ramifications on the natural ecosystem of energy sectors, he has disseminated research findings (Energy Security) in a few seminars and conferences.",
+    desc: "Yukesh R is an Assistant Professor at Voorhees College and working as a Research Intern at The Geostrata think tank. He holds a postgraduate degree in Defence and Strategic Studies and is deeply intrigued by the scope of security challenges. His expertise spans diverse security domains, reinforced by an internship at the Defence Research and Development Organisation (DRDO), yet he is particularly drawn towards energy politics and its evolving landscapes. To further consolidate his knowledge in this area, he has undertaken relevant certificate courses, including Politics and Economics of International Energy from SciencesPo University, Energy Efficiency Indicators: Essentials for Policy Making from the International Energy Agency (IEA), and Control of Radioactive Material Inadvertently Incorporated Into Scrap Metals from the International Atomic Energy Agency (IAEA). Equally important, his engagement in social volunteerism has significantly shaped him, and he has a sustained record of National Service engagement throughout his undergraduate and postgraduate studies. Enlightened by the ramifications of energy sectors on the natural ecosystem, he has disseminated research findings on energy security in a few seminars and conferences.",
     image: yukesh
   },
   {

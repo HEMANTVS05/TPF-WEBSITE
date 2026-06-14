@@ -11,6 +11,7 @@ const EVENTS = [
   { id: 7, date: '2025-10-26', title: 'Coastal Security Threats and Approaches to Neutralize the Threats', time: '10:30 AM', venue: 'Online G - Meet' },
   { id: 8, date: '2026-02-16', title: 'Hands on Training and Basic Research and Design', time: '10:00 AM', venue: 'Maruthupandiyar College Of Arts and Science' },
   { id: 9, date: '2026-03-13', title: 'Newsletter and Designing in the Maritime Domain', time: '02:00 PM', venue: 'Voorhees college, Vellore' },
+  { id: 10, date: '2026-06-19', title: 'Webinar - "The Silent Frontier: Exploring the Sea as a Medium, Undersea Warfare, and Modern Naval Technology"', time: '06:30 PM - 07:30 PM', venue: 'Online - WEB X' },
 ];
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -224,7 +225,6 @@ export default function InteractiveCalendar() {
                   ${hasEvent
                     ? 'bg-[#238dbb] text-white shadow-lg cursor-pointer hover:bg-[#0f4c75] hover:scale-110'
                     : 'text-gray-700 hover:bg-gray-100 cursor-default'}
-                  ${isToday && !hasEvent ? 'bg-blue-50 text-[#0f4c75] border-2 border-[#238dbb]' : ''}
                 `}>
                   {day}
                 </div>
