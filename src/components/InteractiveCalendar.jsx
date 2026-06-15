@@ -227,13 +227,13 @@ export default function InteractiveCalendar() {
             const isToday = new Date().toISOString().split('T')[0] === dateStr;
 
             const colIndex = (firstDay + day - 1) % 7;
-            let tooltipPos = "left-1/2 -translate-x-1/2";
+            let tooltipPos = "lg:left-1/2 lg:right-auto lg:-translate-x-1/2";
             let arrowPos = "left-1/2 -translate-x-1/2";
             if (colIndex <= 1) {
-              tooltipPos = "left-0";
+              tooltipPos = "lg:left-0 lg:right-auto lg:translate-x-0";
               arrowPos = "left-8 md:left-12";
             } else if (colIndex >= 5) {
-              tooltipPos = "right-0";
+              tooltipPos = "lg:right-0 lg:left-auto lg:translate-x-0";
               arrowPos = "right-8 md:right-12";
             }
 
@@ -269,12 +269,15 @@ export default function InteractiveCalendar() {
                 {/* Event Tooltip */}
                 {hasEvent && (
                   <div
-                    className={`absolute bottom-full mb-4 w-80 p-5 bg-white border border-gray-100 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-200 z-50 transform 
-                    ${activeTooltip === dateStr ? 'opacity-100 visible scale-100 pointer-events-auto' : 'opacity-0 invisible scale-95 pointer-events-none lg:pointer-events-auto lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:scale-100'} 
-                    ${tooltipPos}`}
+                    className={`
+                      fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-sm max-h-[85vh] overflow-y-auto z-[100] p-6 bg-white border border-gray-100 rounded-3xl shadow-2xl transition-all duration-300
+                      lg:absolute lg:top-auto lg:bottom-full lg:mb-4 lg:w-80 lg:max-h-none lg:overflow-visible lg:-translate-y-0 lg:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] lg:p-5 lg:rounded-2xl
+                      ${activeTooltip === dateStr ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none lg:pointer-events-auto lg:group-hover:opacity-100 lg:group-hover:visible'} 
+                      ${tooltipPos}
+                    `}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <div className={`absolute -bottom-2 w-4 h-4 bg-white border-b border-r border-gray-100 transform rotate-45 ${arrowPos}`}></div>
+                    <div className={`hidden lg:block absolute -bottom-2 w-4 h-4 bg-white border-b border-r border-gray-100 transform rotate-45 ${arrowPos}`}></div>
                     {dayEvents.map((evt, idx) => (
                       <div key={idx} className={`${idx > 0 ? 'mt-4 pt-4 border-t border-gray-100' : ''}`}>
                         {evt.poster && (
