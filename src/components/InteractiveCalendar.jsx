@@ -11,7 +11,19 @@ const EVENTS = [
   { id: 7, date: '2025-10-26', title: 'Coastal Security Threats and Approaches to Neutralize the Threats', time: '10:30 AM', venue: 'Online G - Meet' },
   { id: 8, date: '2026-02-16', title: 'Hands on Training and Basic Research and Design', time: '10:00 AM', venue: 'Maruthupandiyar College Of Arts and Science' },
   { id: 9, date: '2026-03-13', title: 'Newsletter and Designing in the Maritime Domain', time: '02:00 PM', venue: 'Voorhees college, Vellore' },
-  { id: 10, date: '2026-06-19', title: 'Webinar - "The Silent Frontier: Exploring the Sea as a Medium, Undersea Warfare, and Modern Naval Technology"', time: '06:30 PM - 07:30 PM', venue: 'Online - WEB X' },
+  {
+    id: 10,
+    date: '2026-06-19',
+    title: 'Webinar - "The Silent Frontier: Exploring the Sea as a Medium, Undersea Warfare, and Modern Naval Technology"',
+    time: '06:30 PM - 07:30 PM',
+    venue: 'Online - WEB X',
+    poster: '/webinar_june19_poster.jpeg',
+    meetingDetails: {
+      link: 'https://councilofaquademicresearchandcoastalempowerment-973.my.webex.com/councilofaquademicresearchandcoastalempowerment-973.my/j.php?MTID=m0a6fb929c4e3c291c672ecc4ce149197',
+      number: '2641 413 6668',
+      password: 'abRtrmkP262'
+    }
+  },
 ];
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -24,6 +36,13 @@ export default function InteractiveCalendar() {
 
   const [displayedYear, setDisplayedYear] = useState(new Date().getFullYear());
   const [displayedMonth, setDisplayedMonth] = useState(new Date().getMonth());
+  const [activeTooltip, setActiveTooltip] = useState(null);
+
+  useEffect(() => {
+    const handleClickOutside = () => setActiveTooltip(null);
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
 
   const handleSearch = (year) => {
     if (VALID_YEARS.includes(year)) {
@@ -206,7 +225,7 @@ export default function InteractiveCalendar() {
             const dayEvents = EVENTS.filter(e => e.date === dateStr);
             const hasEvent = dayEvents.length > 0;
             const isToday = new Date().toISOString().split('T')[0] === dateStr;
-            
+
             const colIndex = (firstDay + day - 1) % 7;
             let tooltipPos = "left-1/2 -translate-x-1/2";
             let arrowPos = "left-1/2 -translate-x-1/2";
@@ -219,7 +238,16 @@ export default function InteractiveCalendar() {
             }
 
             return (
-              <div key={day} className="relative group mx-auto w-full py-1 flex items-center justify-center">
+              <div
+                key={day}
+                className="relative group mx-auto w-full py-1 flex items-center justify-center"
+                onClick={(e) => {
+                  if (hasEvent) {
+                    e.stopPropagation();
+                    setActiveTooltip(activeTooltip === dateStr ? null : dateStr);
+                  }
+                }}
+              >
                 <div className={`
                   flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full text-base md:text-lg transition-all duration-300 font-semibold
                   ${hasEvent
@@ -240,12 +268,22 @@ export default function InteractiveCalendar() {
 
                 {/* Event Tooltip */}
                 {hasEvent && (
-                  <div className={`absolute bottom-full mb-4 w-72 p-5 bg-white border border-gray-100 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform scale-95 group-hover:scale-100 ${tooltipPos}`}>
+                  <div
+                    className={`absolute bottom-full mb-4 w-80 p-5 bg-white border border-gray-100 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-200 z-50 transform 
+                    ${activeTooltip === dateStr ? 'opacity-100 visible scale-100 pointer-events-auto' : 'opacity-0 invisible scale-95 pointer-events-none lg:pointer-events-auto lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:scale-100'} 
+                    ${tooltipPos}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <div className={`absolute -bottom-2 w-4 h-4 bg-white border-b border-r border-gray-100 transform rotate-45 ${arrowPos}`}></div>
                     {dayEvents.map((evt, idx) => (
                       <div key={idx} className={`${idx > 0 ? 'mt-4 pt-4 border-t border-gray-100' : ''}`}>
+                        {evt.poster && (
+                          <div className="w-full mb-3 rounded-lg overflow-hidden border border-gray-100">
+                            <img src={evt.poster} alt={evt.title} className="w-full h-auto object-cover" />
+                          </div>
+                        )}
                         <p className="text-[#0f4c75] font-extrabold text-sm mb-2 leading-tight">{evt.title}</p>
-                        <div className="space-y-1.5">
+                        <div className="space-y-1.5 mb-3">
                           <p className="text-gray-500 text-xs flex items-center gap-2 font-medium">
                             <Clock size={14} className="text-gray-400" /> {evt.time}
                           </p>
@@ -254,6 +292,13 @@ export default function InteractiveCalendar() {
                             <span className="leading-snug">{evt.venue}</span>
                           </p>
                         </div>
+                        {evt.meetingDetails && (
+                          <div className="bg-blue-50/50 p-3 rounded-lg border border-blue-100 text-xs text-gray-700 space-y-1">
+                            <p><span className="font-bold text-[#0f4c75]">Meeting Number:</span> {evt.meetingDetails.number}</p>
+                            <p><span className="font-bold text-[#0f4c75]">Password:</span> {evt.meetingDetails.password}</p>
+                            <a href={evt.meetingDetails.link} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-blue-600 font-bold hover:underline break-all">Join Meeting Link</a>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
