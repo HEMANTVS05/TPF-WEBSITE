@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { BookOpen, Newspaper, BookText, BarChart } from 'lucide-react';
+import { BookOpen, Newspaper, BookText, BarChart, FolderOpen } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import PageBanner from './PageBanner';
 
@@ -9,7 +9,8 @@ const libraryItems = [
   { title: "Publication", icon: BookOpen, color: "from-blue-400 to-blue-600", link: "/library/publication" },
   { title: "Articles", icon: Newspaper, color: "from-cyan-400 to-cyan-600", link: "/library/articles" },
   { title: "Monthly Magazines", icon: BookText, color: "from-sky-400 to-sky-600", link: "/library/magazines" },
-  { title: "Research Report", icon: BarChart, color: "from-[#238dbb] to-[#0f4c75]", link: "/library/reports" }
+  { title: "Research Report", icon: BarChart, color: "from-[#238dbb] to-[#0f4c75]", link: "/library/reports" },
+  { title: "Other Reports", icon: FolderOpen, color: "from-indigo-400 to-[#0f4c75]", link: "/library/other-reports" }
 ];
 
 export default function Library() {

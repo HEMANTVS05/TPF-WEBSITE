@@ -21,6 +21,7 @@ import poster2 from '../assets/workshop_poster_2.jpg';
 import poster3 from '../assets/workshop_poster_3.png';
 import webinarPoster1 from '../assets/webinar_poster_1.jpg';
 import webinarPoster2 from '../assets/webinar_poster_2.jpg';
+import webinarPoster3 from '../assets/webinar_poster_3.jpeg';
 import InteractiveCalendar from './InteractiveCalendar';
 import internship from '../assets/internship.jpeg';
 import { Calendar, Clock, MapPin, Construction, Umbrella, Activity, BookOpen, MessageCircle, GraduationCap } from 'lucide-react';
@@ -42,6 +43,14 @@ const webinarCardsData = [
     time: '10:30 AM',
     venue: 'Online Meet',
     poster: webinarPoster2
+  },
+  {
+    id: '3',
+    title: 'The Silent Frontier: Exploring the Sea as a Medium, Undersea Warfare, and Modern Naval Technology',
+    date: '19 June 2026',
+    time: '6:30 PM',
+    venue: 'Online - WebX',
+    poster: webinarPoster3
   }
 ];
 
@@ -348,32 +357,32 @@ export default function GenericPage() {
                     key={workshop.id}
                     className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block transform hover:-translate-y-2"
                   >
-                    <div className="aspect-[2/3] relative overflow-hidden">
+                    <div className="relative overflow-hidden bg-gray-100">
                       <img
                         src={workshop.poster}
                         alt={workshop.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                      {/* Hover overlay - only appears on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                      {/* Hover Info */}
-                      <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                        <span className="inline-block px-3 py-1 bg-[#238dbb]/20 backdrop-blur-md border border-[#238dbb]/30 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-3 w-fit">
+                      {/* Hover Content - slides up on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                        <span className="inline-block px-3 py-1 bg-[#238dbb]/30 backdrop-blur-md border border-[#238dbb]/40 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 w-fit">
                           Workshop
                         </span>
-                        <h4 className="text-xl font-bold !text-white mb-4 drop-shadow-md leading-tight z-10 relative">
+                        <h4 className="text-sm font-bold !text-white mb-2 drop-shadow-lg leading-snug line-clamp-2">
                           {workshop.title}
                         </h4>
-
-                        <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-sm font-medium text-gray-200">
+                        <div className="space-y-1 text-xs font-medium text-gray-200">
                           <p className="flex items-center gap-2">
-                            <Calendar size={16} /> {workshop.date}
+                            <Calendar size={12} className="shrink-0" /> {workshop.date}
                           </p>
                           <p className="flex items-center gap-2">
-                            <Clock size={16} /> {workshop.time}
+                            <Clock size={12} className="shrink-0" /> {workshop.time}
                           </p>
                           <p className="flex items-start gap-2">
-                            <MapPin size={16} className="mt-1 shrink-0" />
+                            <MapPin size={12} className="mt-0.5 shrink-0" />
                             <span className="leading-snug">{workshop.venue}</span>
                           </p>
                         </div>
@@ -389,39 +398,39 @@ export default function GenericPage() {
           {customData.hasWebinarCards && (
             <div className="mt-16 border-t border-gray-200 pt-16">
               <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Our Webinars</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {webinarCardsData.map((webinar) => (
                   <Link
                     to={`/events/webinars/${webinar.id}`}
                     key={webinar.id}
-                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block"
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block transform hover:-translate-y-2"
                   >
-                    <div className="aspect-[3/4] relative overflow-hidden">
+                    <div className="relative overflow-hidden bg-gray-100">
                       <img
                         src={webinar.poster}
                         alt={webinar.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                      {/* Hover overlay - only appears on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                      {/* Hover Info */}
-                      <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                        <span className="inline-block px-3 py-1 bg-[#238dbb]/20 backdrop-blur-md border border-[#238dbb]/30 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-3 w-fit">
+                      {/* Hover Content - slides up on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                        <span className="inline-block px-3 py-1 bg-[#238dbb]/30 backdrop-blur-md border border-[#238dbb]/40 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 w-fit">
                           Webinar
                         </span>
-                        <h4 className="text-xl font-bold !text-white mb-4 drop-shadow-md leading-tight z-10 relative">
+                        <h4 className="text-sm font-bold !text-white mb-2 drop-shadow-lg leading-snug line-clamp-2">
                           {webinar.title}
                         </h4>
-
-                        <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-sm font-medium text-gray-200">
+                        <div className="space-y-1 text-xs font-medium text-gray-200">
                           <p className="flex items-center gap-2">
-                            <Calendar size={16} /> {webinar.date}
+                            <Calendar size={12} className="shrink-0" /> {webinar.date}
                           </p>
                           <p className="flex items-center gap-2">
-                            <Clock size={16} /> {webinar.time}
+                            <Clock size={12} className="shrink-0" /> {webinar.time}
                           </p>
                           <p className="flex items-start gap-2">
-                            <MapPin size={16} className="mt-1 shrink-0" />
+                            <MapPin size={12} className="mt-0.5 shrink-0" />
                             <span className="leading-snug">{webinar.venue}</span>
                           </p>
                         </div>

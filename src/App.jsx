@@ -19,6 +19,9 @@ import WebinarDetails from './components/WebinarDetails';
 import Team from './components/Team';
 import Donate from './components/Donate';
 import SocialSidebar from './components/SocialSidebar';
+import OtherReports from './components/OtherReports';
+import InternshipReports from './components/InternshipReports';
+import InternshipSessionDetail from './components/InternshipSessionDetail';
 import './index.css';
 
 const PageTransition = ({ children }) => {
@@ -77,6 +80,9 @@ const AnimatedRoutes = () => {
         <Route path="/events/webinars/:id" element={<PageTransition><WebinarDetails /></PageTransition>} />
         <Route path="/events/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/library" element={<PageTransition><Library /></PageTransition>} />
+        <Route path="/library/other-reports" element={<PageTransition><OtherReports /></PageTransition>} />
+        <Route path="/library/other-reports/internship-reports" element={<PageTransition><InternshipReports /></PageTransition>} />
+        <Route path="/library/internship-sessions/:id" element={<PageTransition><InternshipSessionDetail /></PageTransition>} />
         <Route path="/library/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/blogs" element={<PageTransition><Blogs /></PageTransition>} />
         <Route path="/blogs/:topic" element={<PageTransition><GenericPage /></PageTransition>} />

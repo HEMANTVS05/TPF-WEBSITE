@@ -43,7 +43,8 @@ const navItems = [
       { name: 'Publication', path: '/library/publication' },
       { name: 'Articles', path: '/library/articles' },
       { name: 'Monthly Magazines', path: '/library/magazines' },
-      { name: 'Research Report', path: '/library/reports' }
+      { name: 'Research Report', path: '/library/reports' },
+      { name: 'Other Reports', path: '/library/other-reports' }
     ]
   },
   {

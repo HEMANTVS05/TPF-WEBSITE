@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Users, User, ArrowLeft, Info, Image as ImageIcon } from 'lucide-react';
 import poster1 from '../assets/webinar_poster_1.jpg';
 import poster2 from '../assets/webinar_poster_2.jpg';
+import poster3 from '../assets/webinar_poster_3.jpeg';
 
 const webinarData = {
   '1': {
@@ -37,6 +38,22 @@ const webinarData = {
     time: '10:30 AM - 11:30 AM',
     mode: 'Online',
     poster: poster2
+  },
+  '3': {
+    title: 'The Silent Frontier: Exploring the Sea as a Medium, Undersea Warfare, and Modern Naval Technology',
+    subtitle: 'A distinguished webinar presented by Council of Aquademic Research and coastal Empowerment',
+    stats: [
+      { label: 'Mode', value: 'Online - WebX' },
+      { label: 'Participants', value: '40' }
+    ],
+    about: 'The webinar on "The Silent Frontier: Exploring the Sea as a Medium, Undersea Warfare, and Modern Naval Technology" featured Commodore Anil Jose Joseph, who provided an insightful overview of naval warfare, maritime strategy, and maritime security challenges. Introduced by Lokeshwari Jothy Natarajan, Commodore Joseph drew upon his extensive naval experience to explain the evolving nature of maritime operations and strategic competition at sea.\n\nA major focus of the session was the complex world of undersea warfare, where Commodore Joseph discussed sonar technology, underwater acoustics, submarine operations, and the strategic contest between submarines and surface vessels. He also examined emerging technologies such as autonomous underwater vehicles and advanced detection systems, highlighting both their operational advantages and technological limitations in modern naval environments.\n\nThe webinar further explored the strategic significance of maritime choke points, deep-sea communication cables, special maritime operations, and India’s growing role in regional maritime cooperation. Commodore Joseph emphasized the importance of international legal frameworks, particularly United Nations Convention on the Law of the Sea, in maintaining maritime order and security. Through an engaging discussion and interactive Q&A session, participants gained a deeper understanding of India\'s maritime strategy, naval diplomacy, and the emerging challenges shaping the future of maritime security.',
+    speakers: 'COMMODORE ANIL JOSE JOSEPH NERIAMPARAMPIL, VSM , INDIAN NAVY(RETD)',
+    participantsDesc: 'Academics, defense researchers, and Students',
+    venue: 'Online - WebX',
+    date: '19 - 06 - 2026',
+    time: '6:30 Pm',
+    mode: 'Online',
+    poster: poster3
   }
 };
 
