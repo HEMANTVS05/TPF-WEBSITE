@@ -197,8 +197,8 @@ const advisoryCouncil = [
     image: tafsir
   },
   {
-    name: "Anil Jose Joseph Neriamparampil",
-    role: "Commodore (Retd), Indian Navy",
+    name: "COMMODORE ANIL JOSE JOSEPH NERIAMPARAMPIL VSM (RETD)",
+    role: "Indian Navy",
     desc: "Commodore Anil Jose Joseph Neriamparampil, VSM (Retd.) is a distinguished veteran of the Indian Navy with over 35 years of exemplary service in maritime operations, naval strategy, and defence leadership. An Anti-Submarine Warfare specialist and alumnus of the Rashtriya Indian Military College, National Defence Academy, Defence Services Staff College, Army War College, and National Defence College, he has commanded several frontline warships and held key operational, instructional, and strategic appointments across the Indian Navy. He was awarded the Vishisht Seva Medal (VSM) for his distinguished service and has received commendations from both the Chief of Naval Staff and the Flag Officer Commanding-in-Chief, Eastern Naval Command. Following his retirement in 2021, Commodore Joseph has remained actively engaged in mentoring, counselling, and leadership development. He serves as a visiting faculty member at defence and academic institutions, contributes regularly to professional journals and seminars, and dedicates his efforts to preparing young aspirants for careers in the Armed Forces. His expertise spans maritime security, naval warfare, leadership, ethics, psychology, and strategic studies, making him a respected speaker and mentor in both military and academic circles.",
     image: aniljose
   },
