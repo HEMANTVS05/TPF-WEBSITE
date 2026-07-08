@@ -26,9 +26,11 @@ import prabhakaran from '../assets/prabhakaran.png'
 import hillar from '../assets/hiller.png'
 import srinivasan from '../assets/srinivasan.png'
 import santosh from '../assets/santhosh.png'
-import thirumaran from '../assets/thiru.png'
+import thirumaran from '../assets/thiru.jpeg'
 import nirmala from '../assets/nirmala.png'
 import tafsir from '../assets/tafsir.png'
+import aniljose from '../assets/anil_jose.jpeg'
+import mathivanan from '../assets/mathi.jpeg'
 import ourteam from '../assets/ourteam.jpg'
 
 
@@ -193,7 +195,20 @@ const advisoryCouncil = [
     role: "Associate Professor",
     desc: "Dr. Tafsir Matin Johansson is an Associate Professor in Ocean Sustainability, Governance, and Management at the World Maritime University–Sasakawa Global Ocean Institute, Sweden. He specializes in ocean governance, maritime law, artificial intelligence, marine technology, and sustainable maritime policy.\nDr. Johansson holds a Ph.D. in Maritime Affairs from WMU and an LL.M. in Maritime Law from Lund University. His research focuses on Arctic governance, maritime decarbonization, marine pollution, climate resilience, fisheries governance, and autonomous ocean systems.\nHe has led and contributed to several international research projects funded by organizations including Transport Canada, the European Union, and the Lloyd’s Register Foundation. Dr. Johansson also serves as a guest lecturer, editorial board member of Ocean Development and International Law, and an active contributor to global discussions on sustainable and technology-driven ocean governance.",
     image: tafsir
+  },
+  {
+    name: "Anil Jose Joseph Neriamparampil",
+    role: "Commodore (Retd), Indian Navy",
+    desc: "Commodore Anil Jose Joseph Neriamparampil, VSM (Retd.) is a distinguished veteran of the Indian Navy with over 35 years of exemplary service in maritime operations, naval strategy, and defence leadership. An Anti-Submarine Warfare specialist and alumnus of the Rashtriya Indian Military College, National Defence Academy, Defence Services Staff College, Army War College, and National Defence College, he has commanded several frontline warships and held key operational, instructional, and strategic appointments across the Indian Navy. He was awarded the Vishisht Seva Medal (VSM) for his distinguished service and has received commendations from both the Chief of Naval Staff and the Flag Officer Commanding-in-Chief, Eastern Naval Command. Following his retirement in 2021, Commodore Joseph has remained actively engaged in mentoring, counselling, and leadership development. He serves as a visiting faculty member at defence and academic institutions, contributes regularly to professional journals and seminars, and dedicates his efforts to preparing young aspirants for careers in the Armed Forces. His expertise spans maritime security, naval warfare, leadership, ethics, psychology, and strategic studies, making him a respected speaker and mentor in both military and academic circles.",
+    image: aniljose
+  },
+  {
+    name: "Dr. R. Mathivanan",
+    role: "Medical Officer",
+    desc: "Dr. R. Mathivanan is a Medical Officer with qualifications in MBBS, MHA, and AFIH, specializing in Occupational Health, Industrial Health, and Healthcare Administration. He currently serves at Igarashi Motors OHC, Chennai, where he focuses on employee health, workplace safety, regulatory compliance, and occupational wellness. Passionate about promoting preventive healthcare and creating safer work environments, Dr. Mathivanan is committed to enhancing organizational well-being through quality medical care and effective health management.",
+    image: mathivanan
   }
+
 ];
 
 export default function Team() {
