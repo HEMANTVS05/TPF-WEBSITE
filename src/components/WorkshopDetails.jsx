@@ -5,6 +5,7 @@ import { Calendar, Clock, MapPin, Users, User, ArrowLeft, Info, Image as ImageIc
 import poster1 from '../assets/poster_1.jpeg';
 import poster2 from '../assets/workshop_poster_2.jpg';
 import poster3 from '../assets/workshop_poster_3.png';
+import poster4 from '../assets/workshop_poster_4.jpeg';
 
 const workshopData = {
   '1': {
@@ -54,6 +55,22 @@ const workshopData = {
     time: '10:00 AM',
     mode: 'Offline',
     poster: poster3
+  },
+  '4': {
+    title: 'Newsletter & Snippet Content Workshop',
+    subtitle: 'Snippet Writing and Media Designing Workshop',
+    stats: [
+      { label: 'Mode', value: 'Offline' },
+      { label: 'Participants', value: '50+' }
+    ],
+    about: 'Our team conducted a Snippet Writing and Media Designing Workshop for the I and II Year Master’s students of the Department of Defence and Strategic Studies, University of Madras. The workshop brought together around 50 enthusiastic participants and focused on developing students’ skills in communicating and presenting issues related to maritime affairs, maritime security, ocean governance, and contemporary developments in the maritime domain.\n\nThe workshop was designed to provide students with practical exposure to maritime news article writing, snippet writing, media designing, and effective communication of maritime-related information. Participants were introduced to techniques for identifying significant developments in the maritime domain, analysing relevant information, and presenting complex maritime issues in a concise, accessible, and engaging manner.\n\nOur team members enthusiastically took on the role of trainers and mentors, guiding students through the different stages of content creation. Through interactive sessions and practical exercises, the team demonstrated how maritime events, strategic developments, naval affairs, ocean-related issues, and coastal concerns can be effectively transformed into news articles, short-form snippets, and visually engaging media content.\n\nParticular emphasis was placed on developing the ability to communicate maritime issues to a wider audience. Students explored how to simplify complex subjects without compromising their strategic relevance, while also learning the importance of accuracy, clarity, credible sources, and visual storytelling when producing maritime-related content.\n\nThe workshop also highlighted the growing significance of maritime awareness and maritime communication in the contemporary strategic environment. With the increasing importance of the Indian Ocean Region, maritime security, blue economy, ocean governance, and coastal communities, the ability to effectively communicate maritime developments has become an important skill for students and young researchers in Defence and Strategic Studies.\n\nThe active participation and enthusiasm of nearly 50 students made the workshop an engaging and productive learning experience. The initiative provided students with an opportunity to strengthen their research, writing, analytical, and media-designing skills, while encouraging greater interest in contemporary maritime affairs.\n\nOur team is proud to have contributed to this academic and skill-development initiative at the University of Madras and remains committed to creating more opportunities that promote maritime awareness, research, and capacity building among young scholars and students.',
+    speakers: 'Team C.A.R.c.E',
+    participantsDesc: 'I and II Year Master’s students\nDept. of Defence & Strategic Studies\nUniversity of Madras.',
+    venue: 'Department of Defence and Strategic Studies\nUniversity of Madras',
+    date: '11 August 2026',
+    time: '10:00 AM - 12:30 PM',
+    mode: 'Offline',
+    poster: poster4
   }
 };
 

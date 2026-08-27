@@ -24,6 +24,8 @@ const EVENTS = [
       password: 'abRtrmkP262'
     }
   },
+  { id: 11, date: '2026-09-02', title: "Two-Day Intercollege Student Seminar: India's Coastal & Maritime Communities", time: '09:30 AM - 04:00 PM', venue: 'Govt. Arts & Science College, Coimbatore', poster: '/seminar_sept_poster.jpeg' },
+  { id: 12, date: '2026-09-03', title: "Two-Day Intercollege Student Seminar: India's Coastal & Maritime Communities", time: '09:30 AM - 04:00 PM', venue: 'Govt. Arts & Science College, Coimbatore', poster: '/seminar_sept_poster.jpeg' },
 ];
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

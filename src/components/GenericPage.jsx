@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom';
 import poster1 from '../assets/poster_1.jpeg';
 import poster2 from '../assets/workshop_poster_2.jpg';
 import poster3 from '../assets/workshop_poster_3.png';
+import poster4 from '../assets/workshop_poster_4.jpeg';
 import webinarPoster1 from '../assets/webinar_poster_1.jpg';
 import webinarPoster2 from '../assets/webinar_poster_2.jpg';
 import webinarPoster3 from '../assets/webinar_poster_3.jpeg';
@@ -79,6 +80,14 @@ const workshopCardsData = [
     time: '10:00 AM',
     venue: 'Maruthupandiyar College',
     poster: poster3
+  },
+  {
+    id: '4',
+    title: 'Newsletter & Snippet Content',
+    date: 'Aug 11, 2026',
+    time: '10:00 AM',
+    venue: 'University of Madras, Chennai',
+    poster: poster4
   }
 ];
 
@@ -355,13 +364,13 @@ export default function GenericPage() {
                   <Link
                     to={`/events/workshops/${workshop.id}`}
                     key={workshop.id}
-                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block transform hover:-translate-y-2"
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-2"
                   >
-                    <div className="relative overflow-hidden bg-gray-100">
+                    <div className="relative overflow-hidden bg-gray-100 flex-1 w-full h-full">
                       <img
                         src={workshop.poster}
                         alt={workshop.title}
-                        className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
                       />
                       {/* Hover overlay - only appears on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -403,13 +412,13 @@ export default function GenericPage() {
                   <Link
                     to={`/events/webinars/${webinar.id}`}
                     key={webinar.id}
-                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 block transform hover:-translate-y-2"
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-2"
                   >
-                    <div className="relative overflow-hidden bg-gray-100">
+                    <div className="relative overflow-hidden bg-gray-100 flex-1 w-full h-full">
                       <img
                         src={webinar.poster}
                         alt={webinar.title}
-                        className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
                       />
                       {/* Hover overlay - only appears on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
