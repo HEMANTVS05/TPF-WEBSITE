@@ -63,7 +63,7 @@ const governingCouncil = [
   },
   {
     name: "Mr Tamil Vendhan Anbarasan",
-    role: "Operations Co-ordinator",
+    role: "General Co-ordinator",
     desc: "Mr Tamilvendhan Anbarasan is an academic and defence studies scholar. He holds a Master's degree in Defence and Strategic Studies from the University of Madras. Currently serving as an Assistant Professor at Maruthupandiyar College of Arts and Science (Thanjavur), He brings both academic and analytical depth to his teaching. His expertise lies at the intersection of defence policy, geopolitics, and strategic affairs, areas that are increasingly vital in today's complex global landscape. Committed to nurturing the next generation of informed and critical thinkers, he strives to make the study of defence and international relations accessible, relevant, and engaging for his students.",
     image: tamilvendhan
   },
@@ -84,12 +84,6 @@ const governingCouncil = [
     role: "BOARD MEMBER",
     desc: "S. Jegathesh Kumar is a UGC-Junior Research Fellow conducting research in Criminology at the University of Madras. His research focuses on IUU Fishing and other Blue crimes. He holds a master’s degree in Criminology and Criminal Justice. He has also held an academic position at leading institution in Madurai.",
     image: jegathesh
-  },
-  {
-    name: "Ms KANIMOZHI NAGARAJAN",
-    role: "BOARD MEMBER",
-    desc: "Kanimozhi Nagarajan brings a strong foundation in commerce and finance, with a B.Com (Corporate Secretaryship) degree from Ethiraj College (2024), complemented by training in Investment Banking. Her career journey led her into Human Resources, where she currently excels in Talent Acquisition for a leading US-based medical billing company. Driven by a passion for people, process, and performance, she is focused on identifying and onboarding top talent in the dynamic US healthcare space. Her interests span organizational development, strategic hiring, and creating meaningful experiences with people.",
-    image: kanimozhi
   },
   {
     name: "Ms Tejesvi",
