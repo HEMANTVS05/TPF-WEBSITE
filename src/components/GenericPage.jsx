@@ -55,6 +55,18 @@ const webinarCardsData = [
   }
 ];
 
+// Conference cards data for the /events/conference route
+const conferenceCardsData = [
+  {
+    id: '1',
+    title: 'India\'s Coastal and Maritime Communities: Building Resilience Against Non-Traditional Security Threats',
+    date: 'Sep 2-3, 2026',
+    time: 'Full Day Event',
+    venue: 'Govt Arts & Science College, CBE',
+    poster: '/seminar_sept_poster.jpeg'
+  }
+];
+
 // Workshop cards data for the /events/workshops route
 const workshopCardsData = [
   {
@@ -137,7 +149,8 @@ Our conferences go beyond traditional academic boundaries; they bridge policy re
 Participants gain not only insights but also opportunities to form strategic partnerships with stakeholders from academia, government, and civil society. The event concludes with a synthesis of recommendations and policy briefs, ensuring continuity in our mission to influence decision-making and coastal governance.
 At C.A.R.c.E., conferences are more than forums of dialogue; they are incubators of innovation and instruments of transformation. By empowering young researchers and community advocates, we strive to build a future where informed minds lead resilient coasts.
 Anchored in science, inspired by policy, and driven by people, our conferences define the pulse of India’s maritime progress.`,
-    image: conference
+    image: conference,
+    hasConferenceCards: true
   },
   '/events/seminars-webinars': {
     title: "Seminar and Webinar",
@@ -393,6 +406,54 @@ export default function GenericPage() {
                           <p className="flex items-start gap-2">
                             <MapPin size={12} className="mt-0.5 shrink-0" />
                             <span className="leading-snug">{workshop.venue}</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Conference Cards Section */}
+          {customData.hasConferenceCards && (
+            <div className="mt-16 border-t border-gray-200 pt-16">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10 text-center">Our Conferences</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {conferenceCardsData.map((conference) => (
+                  <Link
+                    to={`/events/conferences/${conference.id}`}
+                    key={conference.id}
+                    className="group relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-2"
+                  >
+                    <div className="relative overflow-hidden bg-gray-100 flex-1 w-full h-full">
+                      <img
+                        src={conference.poster}
+                        alt={conference.title}
+                        className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {/* Hover overlay - only appears on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      {/* Hover Content - slides up on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                        <span className="inline-block px-3 py-1 bg-[#238dbb]/30 backdrop-blur-md border border-[#238dbb]/40 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 w-fit">
+                          Conference
+                        </span>
+                        <h4 className="text-sm font-bold !text-white mb-2 drop-shadow-lg leading-snug line-clamp-2">
+                          {conference.title}
+                        </h4>
+                        <div className="space-y-1 text-xs font-medium text-gray-200">
+                          <p className="flex items-center gap-2">
+                            <Calendar size={12} className="shrink-0" /> {conference.date}
+                          </p>
+                          <p className="flex items-center gap-2">
+                            <Clock size={12} className="shrink-0" /> {conference.time}
+                          </p>
+                          <p className="flex items-start gap-2">
+                            <MapPin size={12} className="mt-0.5 shrink-0" />
+                            <span className="leading-snug">{conference.venue}</span>
                           </p>
                         </div>
                       </div>

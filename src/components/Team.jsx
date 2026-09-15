@@ -44,12 +44,6 @@ const governingCouncil = [
     image: marshall
   },
   {
-    name: "Mr Kousik Raj P",
-    role: "President",
-    desc: "holds a postgraduate degree in Defence and Strategic Studies from the University of Madras, following his undergraduate studies in commerce. He currently serves as an Assistant Professor in the Department of Defence and Strategic Studies at The New College, Chennai. His research interests focus on national security issues, particularly those affecting coastal regimes. In addition to his academic pursuits, he is a trained open water swimmer with over two years of experience in sea swimming.",
-    image: kousik
-  },
-  {
     name: "Ms Daleeya Dehingia",
     role: "General Secretary",
     desc: "Daleeya is a Research Analyst at Dragonfly Intelligence, with a master’s in Defence and Strategic Studies from the University of Madras. She holds a Political Science degree from the University of Delhi and has briefly worked as a Consular Assistant at the Honorary Consulate of Mauritius. Her experience spans interning at DRDO’s Combat Vehicles R&D Establishment and serving as a conflict negotiator and translator for the Greater Chennai Police. At Delhi University, she led as President of the North East Students' Cell. Daleeya has been a regular at academic conferences and has actively organised numerous inter-college events. A sports enthusiast, she’s passionate about travel, culture, and volunteering for social and environmental causes.",
@@ -102,6 +96,12 @@ const governingCouncil = [
     role: "Social media",
     desc: "Deepanwita is currently pursuing her Bachelors in Modern Office Management from the University of Delhi. With a strong foundation in administrative management and digital communication, she has developed practical skills in human resource management functions, social media management, designing content, and website coordination. She has experience handling tasks like recruitment support, maintaining learning management systems (LMS), maintaining websites, and contributing to improving user experience and engagement. With a proactive and organized approach, Deepanwita brings creativity, efficiency, and people skills to every role blending HR understanding with digital and operational expertise.",
     image: deepanwita
+  },
+  {
+    name: "Mr Kousik Raj P",
+    role: "Member",
+    desc: "holds a postgraduate degree in Defence and Strategic Studies from the University of Madras, following his undergraduate studies in commerce. He currently serves as an Assistant Professor in the Department of Defence and Strategic Studies at The New College, Chennai. His research interests focus on national security issues, particularly those affecting coastal regimes. In addition to his academic pursuits, he is a trained open water swimmer with over two years of experience in sea swimming.",
+    image: kousik
   },
   {
     name: "Ms Dhanya D",

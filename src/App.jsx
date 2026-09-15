@@ -16,6 +16,7 @@ import GenericPage from './components/GenericPage';
 import Gallery from './components/Gallery';
 import WorkshopDetails from './components/WorkshopDetails';
 import WebinarDetails from './components/WebinarDetails';
+import ConferenceDetails from './components/ConferenceDetails';
 import Team from './components/Team';
 import Donate from './components/Donate';
 import SocialSidebar from './components/SocialSidebar';
@@ -78,6 +79,7 @@ const AnimatedRoutes = () => {
         <Route path="/events" element={<PageTransition><Events /></PageTransition>} />
         <Route path="/events/workshops/:id" element={<PageTransition><WorkshopDetails /></PageTransition>} />
         <Route path="/events/webinars/:id" element={<PageTransition><WebinarDetails /></PageTransition>} />
+        <Route path="/events/conferences/:id" element={<PageTransition><ConferenceDetails /></PageTransition>} />
         <Route path="/events/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/library" element={<PageTransition><Library /></PageTransition>} />
         <Route path="/library/other-reports" element={<PageTransition><OtherReports /></PageTransition>} />
