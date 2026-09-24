@@ -9,14 +9,17 @@ import Slideshow from './Slideshow';
 const medicalGlob = import.meta.glob('../assets/medical_*.jpeg', { eager: true, import: 'default' });
 const workshopGlob = import.meta.glob('../assets/workshop_*.jpeg', { eager: true, import: 'default' });
 const cleanupGlob = import.meta.glob('../assets/cleanup_*.jpeg', { eager: true, import: 'default' });
-const confGlob = import.meta.glob('../assets/conf_*.jpeg', { eager: true, import: 'default' });
+const confGlob = import.meta.glob('../assets/[0-9]*.jpeg', { eager: true, import: 'default' });
 
 const extractImages = (globObj) => {
   return Object.keys(globObj)
-    .map(key => ({
-      url: globObj[key],
-      num: parseInt(key.match(/_(\d+)\.jpeg$/)[1], 10)
-    }))
+    .map(key => {
+      const match = key.match(/(\d+)\.jpeg$/);
+      return {
+        url: globObj[key],
+        num: match ? parseInt(match[1], 10) : 0
+      };
+    })
     .sort((a, b) => a.num - b.num)
     .map(item => item.url);
 };

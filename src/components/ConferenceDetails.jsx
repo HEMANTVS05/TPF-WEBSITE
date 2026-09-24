@@ -4,14 +4,17 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Users, User, ArrowLeft, Info, Image as ImageIcon } from 'lucide-react';
 import Slideshow from './Slideshow';
 
-const confGlob = import.meta.glob('../assets/conf_*.jpeg', { eager: true, import: 'default' });
+const confGlob = import.meta.glob('../assets/[0-9]*.jpeg', { eager: true, import: 'default' });
 
 const extractImages = (globObj) => {
   return Object.keys(globObj)
-    .map(key => ({
-      url: globObj[key],
-      num: parseInt(key.match(/_(\d+)\.jpeg$/)[1], 10)
-    }))
+    .map(key => {
+      const match = key.match(/(\d+)\.jpeg$/);
+      return {
+        url: globObj[key],
+        num: match ? parseInt(match[1], 10) : 0
+      };
+    })
     .sort((a, b) => a.num - b.num)
     .map(item => item.url);
 };
