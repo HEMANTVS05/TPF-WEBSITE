@@ -14,10 +14,17 @@ const confGlob = import.meta.glob('../assets/[0-9]*.jpeg', { eager: true, import
 const extractImages = (globObj) => {
   return Object.keys(globObj)
     .map(key => {
-      const match = key.match(/(\d+)\.jpeg$/);
+      const filename = key.split('/').pop();
+      const match = filename.match(/(\d+)/);
+      let num = 0;
+      if (match) {
+        num = parseInt(match[1], 10);
+        if (filename.includes('before')) num -= 0.5;
+        if (filename.includes('after')) num += 0.5;
+      }
       return {
         url: globObj[key],
-        num: match ? parseInt(match[1], 10) : 0
+        num: num
       };
     })
     .sort((a, b) => a.num - b.num)
