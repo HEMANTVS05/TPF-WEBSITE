@@ -15,14 +15,14 @@ import s10 from "../assets/s10.jpeg";
 
 const scholars = [
   { name: "Mr. Gaurav Mishra", role: "IIT Delhi", image: s1 },
-  { name: "Ms. Shrey Shaurya Singh Bisht", role: "Doctoral Candidate,\nUniversity of Delhi", image: s2 },
+  { name: "Mr. Shrey Shaurya Singh Bisht", role: "Doctoral Candidate,\nUniversity of Delhi", image: s2 },
   { name: "Ms. Moitrayee Devi Baruah", role: "Doctoral Candidate,\nJawaharlal Nehru University", image: s3 },
   { name: "Mr. Vignesh M", role: "Asst. Prof & Head, Sree Ramu College of Arts & Science", image: s4 },
   { name: "Lt. D. Sakthivel", role: "Asst. Prof, Sree Ramu College of Arts & Science", image: s5 },
   { name: "Ms. Sony J R", role: "Teaching Associate, SRM Institute Katangalathur", image: s6 },
   { name: "Mr. K. Purushothamman", role: "Asst. Prof, Polachi Arts and Science College", image: s7 },
   { name: "Ms. S Abirami", role: "Assistant Professor, Takshashila University", image: null },
-  { name: "Ms. Harin Ebinesar", role: "Assistant Professor, Akshaya College", image: null },
+  { name: "Mr. Harin Ebinesar", role: "Assistant Professor, Akshaya College", image: null },
   { name: "Mr. Revaan M S", role: "Independent Researcher", image: s10 },
 ];
 
