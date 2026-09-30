@@ -238,11 +238,14 @@ Our newspaper stories sail beyond headlines they document the living pulse of In
   },
   '/blogs/podcast': {
     title: "Podcast",
-    content: `The C.A.R.c.E. Podcast Series offers an immersive audio experience that dives deep into maritime conversations. Through candid dialogues, interviews, and storytelling, our podcasts connect listeners to the people, policies, and projects shaping India’s coastal and oceanic future.
+    content: `The C.A.R.c.E. Podcast Series offers an immersive audio experience that dives deep into maritime conversations. Through candid dialogues, interviews, and storytelling, our podcasts connect listeners to the people, policies, and projects shaping India's coastal and oceanic future.
 Each episode features experts, youth leaders, and coastal community representatives discussing pressing maritime issues such as ocean conservation, maritime law, blue economy growth, security challenges, and traditional knowledge systems. Designed for accessibility, our podcasts bring maritime awareness to listeners across all backgrounds, from students and researchers to coastal citizens and policymakers. Episodes are available in multiple formats, ensuring inclusivity and reach.
 Our podcast is more than information; it is a movement to humanise maritime research, making it relatable, conversational, and inspiring. The relaxed, discussion-based format allows experts and youth alike to explore ideas and share experiences that go beyond conventional learning. By amplifying coastal voices and youth insights, the C.A.R.c.E. Podcast Series transforms complex maritime topics into stories of human courage, innovation, and hope.
 Tune in where every conversation connects the coast, the community, and the country.`,
-    image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=2070&auto=format&fit=crop",
+    podcastVideos: [
+      { title: "Salt and Strategy", videoId: "hjgIBrLboUM" }
+    ]
   },
   '/blogs/data-collection': {
     title: "Data Collection",
@@ -365,6 +368,71 @@ export default function GenericPage() {
                   allowFullScreen
                 ></iframe>
               </div>
+            </div>
+          )}
+
+          {/* Podcast Videos Section */}
+          {customData.podcastVideos && customData.podcastVideos.length > 0 && (
+            <div className="mt-16 border-t border-gray-200 pt-16">
+              {customData.podcastVideos.map((podcast, index) => (
+                <div key={index} className={index > 0 ? "mt-20" : ""}>
+                  {/* Elegant Podcast Title */}
+                  <div className="flex flex-col items-center mb-10 gap-3">
+                    <span style={{
+                      letterSpacing: '0.25em',
+                      fontSize: '0.65rem',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      color: '#238dbb',
+                      background: 'linear-gradient(90deg, #0f4c75, #238dbb)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}>
+
+                    </span>
+                    <h3 style={{
+                      fontFamily: "'Georgia', 'Times New Roman', serif",
+                      fontSize: 'clamp(2rem, 5vw, 3.25rem)',
+                      fontStyle: 'italic',
+                      fontWeight: 700,
+                      background: 'linear-gradient(135deg, #0f2942 0%, #0f4c75 45%, #238dbb 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      letterSpacing: '-0.01em',
+                      lineHeight: 1.15,
+                      textAlign: 'center',
+                      margin: 0,
+                    }}>
+                      {podcast.title}
+                    </h3>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      marginTop: '4px',
+                    }}>
+                      <div style={{ height: '1px', width: '60px', background: 'linear-gradient(90deg, transparent, #238dbb)' }} />
+                      <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#238dbb', opacity: 0.7 }} />
+                      <div style={{ height: '1px', width: '60px', background: 'linear-gradient(90deg, #238dbb, transparent)' }} />
+                    </div>
+                  </div>
+
+                  <div className="aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-black">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${podcast.videoId}?autoplay=0&rel=0`}
+                      title={podcast.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 

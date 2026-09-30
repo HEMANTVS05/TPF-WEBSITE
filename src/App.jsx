@@ -18,6 +18,7 @@ import WorkshopDetails from './components/WorkshopDetails';
 import WebinarDetails from './components/WebinarDetails';
 import ConferenceDetails from './components/ConferenceDetails';
 import Team from './components/Team';
+import UrgentScholars from './components/UrgentScholars';
 import Donate from './components/Donate';
 import SocialSidebar from './components/SocialSidebar';
 import OtherReports from './components/OtherReports';
@@ -91,6 +92,8 @@ const AnimatedRoutes = () => {
         <Route path="/career" element={<PageTransition><Career /></PageTransition>} />
         <Route path="/career/:topic" element={<PageTransition><GenericPage /></PageTransition>} />
         <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
+        <Route path="/urgent-scholars" element={<PageTransition><UrgentScholars /></PageTransition>} />
+        <Route path="/adjunct-scholars" element={<PageTransition><UrgentScholars /></PageTransition>} />
         <Route path="/donate" element={<PageTransition><Donate /></PageTransition>} />
         <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />

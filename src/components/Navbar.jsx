@@ -11,6 +11,7 @@ const navItems = [
     hash: '#about-us',
     subItems: [
       { name: 'Our Team', path: '/team' },
+      { name: 'Adjunct Scholars', path: '/adjunct-scholars' },
       { name: 'Gallery', path: '/gallery' }
     ]
   },
